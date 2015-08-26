@@ -36,13 +36,37 @@ angular.module('vllaznia.controllers', [])
     };
   })
 
-    .controller('IndexCtrl', function($scope, $ionicSlideBoxDelegate, $state, $timeout, $ionicLoading, $ionicPopup, LajmeService, NdeshjetService) {
+    .controller('IndexCtrl', function($scope, $ionicSlideBoxDelegate, $state, $timeout, $ionicLoading, $ionicPopup, LajmeService, $ionicModal, $rootScope, NdeshjetService) {
         var tani = new Date();
         var timerhide = 5000;
         ga_storage._trackPageview('#/app/index', 'Vllaznia App Index');
         if(navigator.splashscreen){
            navigator.splashscreen.hide();
         }
+
+        $scope.CloseNotification = function() {
+           $scope.modal.hide();
+          //notifica();
+       };
+
+       $ionicModal.fromTemplateUrl('modal.html', function($ionicModal) {
+          $scope.modal = $ionicModal;
+       }, {
+       // Use our scope for the scope of the modal to keep it simple
+       scope: $scope,
+       // The animation we want to use for the modal entrance
+       animation: 'slide-in-up'
+       });
+
+       var notifica = $rootScope.$on('pushEvent', function(event,message){
+        // alert("Notification received:\n" + JSON.stringify(message));
+         $scope.titulli=message.additionalData.title;
+         $scope.teksti=message.message;
+         //$scope.dati = JSON.stringify(message);
+         $scope.modal.show();
+       });
+
+
         /**
         if(window.localStorage["notification"] !== undefined) {
             notification = JSON.parse(window.localStorage["notification"]);
@@ -170,6 +194,7 @@ angular.module('vllaznia.controllers', [])
       $scope.clubId = 13;
 
       $scope.SezoneList = [
+        { text: "Superliga 2014-15", value: 105 },
         { text: "Superliga 2014-15", value: 100 },
         { text: "Superliga 2013-14", value: 97 },
         { text: "Superliga 2012-13", value: 86 },
@@ -308,6 +333,7 @@ angular.module('vllaznia.controllers', [])
      ga_storage._trackPageview('#/app/klasifikimi', 'Vllaznia App Klasifikimi');
      var titulliPop = "Zgjidh kampionatin";
      $scope.SezoneList = [
+       { text: "Superliga 2015-16", value: 105 },
        { text: "Superliga 2014-15", value: 100 },
        { text: "Superliga 2013-14", value: 97 },
        { text: "Superliga 2012-13", value: 86 },
@@ -383,7 +409,7 @@ angular.module('vllaznia.controllers', [])
 
     .controller('LojtaretCtrl', function($scope, $timeout, $stateParams, $ionicLoading, EkipiService) {
         ga_storage._trackPageview('#/app/ekipi', 'Vllaznia App Ekipi');
-        $scope.sezoni_id =100;
+        $scope.sezoni_id ='superliga';
         $scope.ekipiId =13;
         $scope.loadingIndicator = $ionicLoading.show({
 	         content: 'Loading Data',

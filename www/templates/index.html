@@ -43,3 +43,17 @@
      </div>
   </ion-content>
 </ion-view>
+
+    <script id="modal.html" type="text/ng-template">
+      <div class="modal">
+        <header class="bar bar-header bar-positive">
+          <h1 class="title">{{titulli}}</h1>
+          <div class="button button-clear" ng-click="CloseNotification()"><span class="icon ion-close"></span></div>
+        </header>
+        <ion-content class="padding" has-header="true">
+          <div has-header="true">
+            <p>{{teksti}}</p>
+          </div>
+        </ion-content>
+      </div>
+    </script>
