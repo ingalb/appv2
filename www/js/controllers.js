@@ -194,7 +194,7 @@ angular.module('vllaznia.controllers', [])
       $scope.clubId = 13;
 
       $scope.SezoneList = [
-        { text: "Superliga 2014-15", value: 105 },
+        { text: "Superliga 2015-16", value: 105 },
         { text: "Superliga 2014-15", value: 100 },
         { text: "Superliga 2013-14", value: 97 },
         { text: "Superliga 2012-13", value: 86 },
