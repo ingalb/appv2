@@ -158,7 +158,6 @@ angular.module('vllaznia.controllers', [])
             $scope.lajme = data;
             //console.log($scope.lajme);
             $ionicLoading.hide();
-            admob.showBannerAd();
         });
         $scope.doRefresh = function() {
           LajmeService.getAll(function(data) {
@@ -187,7 +186,6 @@ angular.module('vllaznia.controllers', [])
 	});
         $scope.lajmi = LajmeService.getId($stateParams.lajmiId);
         $ionicLoading.hide();
-        admob.showBannerAd();
     })
 
     .controller('NdeshjetCtrl', function($scope, $sce, $timeout, $ionicLoading, $ionicBackdrop, $ionicPopover, NdeshjetService) {
@@ -252,6 +250,7 @@ angular.module('vllaznia.controllers', [])
        var time = 1;
        var d1, minuti, percenti;
        //$scope.minuta = "minuta";
+       admob.showBannerAd(false);
        $scope.loadingIndicator = $ionicLoading.show({
 	        content: 'Loading Data',
 	        animation: 'fade-in',
