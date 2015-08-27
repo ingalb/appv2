@@ -40,7 +40,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
                                    {googleProjectNumber: "455582282730"},
                                    notificationOpenedCallback);
 
-    window.plugins.OneSignal.sendTags({kej: "1"});
+    window.plugins.OneSignal.sendTags({version: "2"});
 /*
 window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
                        {googleProjectNumber: "455582282730"},

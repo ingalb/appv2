@@ -67,7 +67,7 @@ angular.module('vllaznia.services', [])
               });
             },
             getSuperligaLastNdeshje: function(callback) {
-                $http.get(URL_APP+'ndeshjet.php?id=superliga&ekipi=13').success(
+                $http.get(URL_APP+'ndeshjet.php?id=superliga1&ekipi=13').success(
                     function(data) {
                         ndeshjet = data;
                         window.localStorage["lastNdeshjet"] = JSON.stringify(data);
