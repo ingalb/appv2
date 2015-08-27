@@ -11,12 +11,13 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     try{
 
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/index', 'Vllaznia App Home');
+        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js');
        //ga_storage._trackPageview('#/app/klasifikimi', 'Vllaznia App klasifikimi');
 
         admob.setOptions({
             publisherId: "ca-app-pub-7925487268042880/6770099564",  // Required
             interstitialAdId: "ca-app-pub-7925487268042880/7097196767",
+            autoShowBanner: false,
             autoShowInterstitial: false
           });
 

@@ -108,7 +108,7 @@ angular.module('vllaznia.controllers', [])
             $scope.slider = data;
             $ionicLoading.hide();
             $ionicSlideBoxDelegate.update();
-
+            admob.showBannerAd();
         });
         NdeshjetService.getSuperligaLastNdeshje(function(data) {
             //alert(tani);
@@ -158,6 +158,7 @@ angular.module('vllaznia.controllers', [])
             $scope.lajme = data;
             //console.log($scope.lajme);
             $ionicLoading.hide();
+            admob.showBannerAd();
         });
         $scope.doRefresh = function() {
           LajmeService.getAll(function(data) {
@@ -186,6 +187,7 @@ angular.module('vllaznia.controllers', [])
 	});
         $scope.lajmi = LajmeService.getId($stateParams.lajmiId);
         $ionicLoading.hide();
+        admob.showBannerAd();
     })
 
     .controller('NdeshjetCtrl', function($scope, $sce, $timeout, $ionicLoading, $ionicBackdrop, $ionicPopover, NdeshjetService) {
