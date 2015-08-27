@@ -203,7 +203,7 @@ angular.module('vllaznia.controllers', [])
         { text: "Superliga 2009-10", value: 10 },
        ];
 
-
+      admob.showBannerAd();
       $scope.sezoni_id = $scope.SezoneList[0].value;
       $scope.sezoni_text = $scope.SezoneList[0].text;
 
@@ -250,7 +250,7 @@ angular.module('vllaznia.controllers', [])
        var time = 1;
        var d1, minuti, percenti;
        //$scope.minuta = "minuta";
-       //admob.showBannerAd(false);
+       admob.showBannerAd(false);
        $scope.loadingIndicator = $ionicLoading.show({
 	        content: 'Loading Data',
 	        animation: 'fade-in',
