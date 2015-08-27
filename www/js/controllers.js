@@ -250,7 +250,7 @@ angular.module('vllaznia.controllers', [])
        var time = 1;
        var d1, minuti, percenti;
        //$scope.minuta = "minuta";
-       admob.showBannerAd(false);
+       //admob.showBannerAd(false);
        $scope.loadingIndicator = $ionicLoading.show({
 	        content: 'Loading Data',
 	        animation: 'fade-in',
