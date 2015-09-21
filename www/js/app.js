@@ -14,6 +14,22 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js');
        //ga_storage._trackPageview('#/app/klasifikimi', 'Vllaznia App klasifikimi');
 
+var ad_units = {
+    ios : {
+        banner:"32016490754_10152997301780755",
+        interstitial:"32016490754_10152997301780755"
+    },
+    android : {
+        banner:"32016490754_10152997301780755",
+        interstitial:"32016490754_10152997301780755"
+    }
+};
+var adid = ad_units.android;
+FacebookAds.prepareInterstitial( {adId:adid.interstitial, autoShow:false} );
+
+// show the interstitial later, e.g. at end of game level
+FacebookAds.showInterstitial();
+
         admob.setOptions({
             publisherId: "ca-app-pub-7925487268042880/6770099564",  // Required
             interstitialAdId: "ca-app-pub-7925487268042880/7097196767",
