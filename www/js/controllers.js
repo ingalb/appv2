@@ -154,6 +154,7 @@ angular.module('vllaznia.controllers', [])
 	    maxWidth: 200,
 	    showDelay: 100
 	    });
+      FacebookAds.showInterstitial();
         LajmeService.getAll(function(data) {
             $scope.lajme = data;
             //console.log($scope.lajme);

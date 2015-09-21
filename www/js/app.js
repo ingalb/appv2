@@ -20,12 +20,22 @@ var ad_units = {
         interstitial:"32016490754_10152997301780755"
     },
     android : {
-        banner:"32016490754_10152997301780755",
+        banner:"32016490754_10152997570155755",
         interstitial:"32016490754_10152997301780755"
     }
 };
+
 var adid = ad_units.android;
-FacebookAds.prepareInterstitial( {adId:adid.interstitial, autoShow:false} );
+
+if(FacebookAds) FacebookAds.setOptions({
+    isTesting: false
+});
+
+if(FacebookAds){
+   FacebookAds.createBanner( adid.banner );
+   alert("banner");
+ }
+FacebookAds.prepareInterstitial( {adId:adid.interstitial, autoShow:true} );
 
 // show the interstitial later, e.g. at end of game level
 FacebookAds.showInterstitial();
