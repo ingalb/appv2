@@ -34,11 +34,12 @@ if(FacebookAds) FacebookAds.setOptions({
 });
 
 if(FacebookAds){
-   FacebookAds.createBanner( adid.banner );
+  // FacebookAds.createBanner( adid.banner );
    //alert("banner");
  }
 FacebookAds.prepareInterstitial( {adId:adid.interstitial, autoShow:true} );
 FacebookAds.createNativeAd(adid.native);
+FacebookAds.showBannerAtXY(0, 360);
 // show the interstitial later, e.g. at end of game level
 FacebookAds.showInterstitial();
 
@@ -48,8 +49,8 @@ FacebookAds.showInterstitial();
             autoShowInterstitial: false
           });
 
-        admob.createBannerView();
-        admob.requestInterstitialAd();
+      //  admob.createBannerView();
+      //  admob.requestInterstitialAd();
 
     } catch (e) {
           alert(e.message);

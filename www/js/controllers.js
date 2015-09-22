@@ -131,7 +131,7 @@ angular.module('vllaznia.controllers', [])
 
 
      (function update() {
-        $timeout(update, 1200);
+        $timeout(update, 12000);
         NdeshjetService.getSuperligaLastNdeshje(function(data) {
             //console.log(tani);
             //$scope.items = data;
