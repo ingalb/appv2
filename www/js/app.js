@@ -17,11 +17,13 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 var ad_units = {
     ios : {
         banner:"32016490754_10152997301780755",
-        interstitial:"32016490754_10152997301780755"
+        interstitial:"32016490754_10152997301780755",
+        native: "32016490754_10152999183665755"
     },
     android : {
         banner:"32016490754_10152997570155755",
-        interstitial:"32016490754_10152997301780755"
+        interstitial:"32016490754_10152997301780755",
+        native: "32016490754_10152999183665755"
     }
 };
 
@@ -33,10 +35,10 @@ if(FacebookAds) FacebookAds.setOptions({
 
 if(FacebookAds){
    FacebookAds.createBanner( adid.banner );
-   alert("banner");
+   //alert("banner");
  }
 FacebookAds.prepareInterstitial( {adId:adid.interstitial, autoShow:true} );
-
+FacebookAds.createNativeAd(adid.native);
 // show the interstitial later, e.g. at end of game level
 FacebookAds.showInterstitial();
 
