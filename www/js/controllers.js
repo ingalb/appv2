@@ -305,6 +305,7 @@ angular.module('vllaznia.controllers', [])
         $ionicBackdrop.retain();
         NdeshjetService.getAllNdeshjet($scope.sezoni_id, $scope.clubId, function(data) {
             $scope.items = data;
+			//console.log(data.length);
             //selectPopup.close();
             $scope.popover.hide();
             $ionicBackdrop.release();
@@ -320,7 +321,7 @@ angular.module('vllaznia.controllers', [])
         },5000);
       })
 
-     .controller('NdeshjetDetCtrl', function($scope, $sce, $stateParams, $timeout, $ionicScrollDelegate, $ionicSlideBoxDelegate, $ionicLoading, NdeshjaService) {
+     .controller('NdeshjetDetCtrl', function($scope, $sce, $stateParams, $timeout, $ionicNavBarDelegate, $ionicScrollDelegate, $ionicSlideBoxDelegate, $ionicLoading, NdeshjaService) {
        ga_storage._trackPageview('#/app/ndeshja/'+ $stateParams.ndeshjaId+'', 'Vllaznia App Ndeshja Det');
        var tani = new Date();
        var time = 1;
@@ -362,7 +363,7 @@ angular.module('vllaznia.controllers', [])
 		$scope.notification = false;
 		$scope.anim = "ion-ios-bell-outline";
 		window.plugins.OneSignal.deleteTag(tags);
-	   }
+	   } 
        $scope.loadingIndicator = $ionicLoading.show({
 	        content: 'Loading Data',
 	        animation: 'fade-in',
@@ -554,6 +555,7 @@ angular.module('vllaznia.controllers', [])
 	      });
         EkipiService.getAllEkipi($scope.sezoni_id,$scope.ekipiId, function(data) {
             $scope.items = data;
+			//console.log(data);
             $ionicLoading.hide();
         });
         $timeout(function(){
@@ -620,6 +622,7 @@ angular.module('vllaznia.controllers', [])
           $ionicScrollDelegate.resize();
           $ionicSlideBoxDelegate.update();
           $ionicScrollDelegate.scrollTop(true);
+		  //$ionicScrollDelegate.scrollBy(0, 100);
          }
         $scope.slideTo = function(index) {
           if(index){
@@ -627,6 +630,7 @@ angular.module('vllaznia.controllers', [])
           $ionicSlideBoxDelegate.slide(index);
           $ionicScrollDelegate.resize();
           $ionicSlideBoxDelegate.update();
+		  //$ionicScrollDelegate.scrollBy(0, 100);
           $ionicScrollDelegate.scrollTop(true);
           }
           else{
@@ -634,11 +638,13 @@ angular.module('vllaznia.controllers', [])
           $ionicSlideBoxDelegate.slide(index);
           $ionicScrollDelegate.resize();
           $ionicSlideBoxDelegate.update();
-          $ionicScrollDelegate.scrollTop(true);
+		  $ionicScrollDelegate.scrollBy(0, 100);
+          //$ionicScrollDelegate.scrollTop(true);
           }
           $ionicSlideBoxDelegate.slide(index);
           $ionicScrollDelegate.resize();
           $ionicSlideBoxDelegate.update();
+		  //$ionicScrollDelegate.scrollBy(0, 100);
           $ionicScrollDelegate.scrollTop(true);
        }
     })
@@ -649,7 +655,8 @@ angular.module('vllaznia.controllers', [])
           //admob.showBannerAd(false);
           //admob.showInterstitialAd();
           //showInterstitialAd();
-          admob.showInterstitialAd();
+          admob.cacheInterstitial();
+		  admob.showInterstitial();
           ga_storage._trackPageview('#/app/tv', 'Vllaznia App TV');
           $scope.browse = function(v) {
             ga_storage._trackEvent('TV', 'Play', v);

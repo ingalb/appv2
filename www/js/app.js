@@ -67,8 +67,7 @@ window.plugins.OneSignal.getIds(function(ids) {
 */
 
 
-  // alert("Ready");
-   if(window.cordova && window.cordova.plugins.Keyboard) {
+    if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
     if(window.StatusBar) {

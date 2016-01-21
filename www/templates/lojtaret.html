@@ -7,12 +7,12 @@
       <div class="list">
         <a ng-repeat="player in items" 
            href="#/app/ekipi/{{$index+1}}"
-           class="item item-avatar">
+           class="item item-avatar" ng-if="player.larguar != 1" >
 
           <img ng-src="http://www.albaniasoccer.com/{{ player.foto }}">
           <h2 class="lajmi-titulli assertive">{{ player.emri }} {{ player.mbiemri}}</h2>
           <p>{{ player.pozicioni }}</p>
-          <span class="bluza">{{ player.nr }}</span>
+          <span ng-if="player.type == 'player'" class="bluza">{{ player.nr }}</span>
         </a>
       </div>
 

@@ -200,7 +200,6 @@
                 color: #444;
                 font-weight:bold;
 	}
-.timer >.percent:after { content: "'";}
 .timer > #slice {
 		position:absolute;
 		width:1em;
