@@ -1,4 +1,33 @@
 /* Empty. Add your own CSS if you like */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@font-face {
+    font-family: 'aller-regular';
+    src: url('../lib/ionic/fonts/aller_rg-webfont.eot');
+    src: url('../lib/ionic/fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../lib/ionic/fonts/aller_rg-webfont.woff2') format('woff2'),
+         url('../lib/ionic/fonts/aller_rg-webfont.woff') format('woff'),
+         url('../lib/ionic/fonts/aller_rg-webfont.ttf') format('truetype'),
+         url('../lib/ionic/fonts/aller_rg-webfont.svg#allerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+		font-family: 'ikaros-light';
+		src: url('../lib/ionic/fonts/ikaros_light-webfont.eot');
+		src: url('../lib/ionic/fonts/ikaros_light-webfont.eot?#iefix') format('embedded-opentype'),
+				url('../lib/ionic/fonts/ikaros_light-webfont.woff2') format('woff2'),
+				url('../lib/ionic/fonts/ikaros_light-webfont.woff') format('woff'),
+				url('../lib/ionic/fonts/ikaros_light-webfont.ttf') format('truetype'),
+				url('../lib/ionic/fonts/ikaros_light-webfont.svg#allerregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+
+body{
+ /*font-family: 'arciformregular';*/
+}
 
 @font-face {
 	font-family: 'ingalb';
@@ -86,6 +115,10 @@
 	content: "\e613";
 }
 
+.spinner, .spinner-android{
+	color: #EE1C24;
+	stroke: #EE1C24;
+}
 
 #sfondi {
     margin: 0 auto;

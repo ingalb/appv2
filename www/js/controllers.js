@@ -130,16 +130,6 @@ angular.module('vllaznia.controllers', [])
          //$scope.data = d1;
          return ( d1>d2);
        };
-
-
-     (function update() {
-        $timeout(update, 12000);
-        NdeshjetService.getSuperligaLastNdeshje(function(data) {
-            //console.log(tani);
-            //$scope.items = data;
-            $scope.items = data.slice(0,2);
-        });
-       }());
 	   
 	  $scope.$on('$ionicView.beforeLeave', function(){
          $timeout.cancel(timer);
