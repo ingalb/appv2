@@ -113,18 +113,12 @@
 
     <!-- iPhone 6 -->
     <splash src="res/screen/ios/Default-667h@2x.png" platform="ios" width="750" height="1334" />
-    <splash src="res/screen/ios/Default-Portrait-736h@3x.png" platform="ios" width="1242" height="2208" />
     <splash src="res/screen/ios/Default-Landscape-736h@3x.png" platform="ios" width="2208" height="1242" />
 
     <!-- iPad -->
     <splash src="res/screen/ios/Default-Portrait.png" platform="ios" width="768" height="1024" />
     <splash src="res/screen/ios/Default-Landscape.png" platform="ios" width="1024" height="768" />
 
-    <!-- Retina iPad -->
-    <splash src="res/screen/ios/Default-Portrait@2x.png" platform="ios" width="1536" height="2048" />
-    <splash src="res/screen/ios/Default-Landscape@2x.png" platform="ios" width="2048" height="1536" />
-
-	
 	
     <access origin="*"/>
     <access origin="ingalb.info" subdomains="true"/>
