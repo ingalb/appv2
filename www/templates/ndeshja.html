@@ -1,8 +1,9 @@
-<ion-view cache-view="false" title="{{item.java}}">
+<ion-view on-swipe-right="slidePrevious()" on-swipe-left="slideNext()" cache-view="false" title="{{item.java}}">
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
+    <button ng-class="anim" class="button button-icon icon" ng-click="subNotification()"></button>
     <button class="button button-icon icon ion-ios-refresh-empty" ng-click="doRefresh()"></button>
   </ion-nav-buttons>
 
@@ -16,7 +17,7 @@
  </ion-refresher>
  <div class="item item-text-wrap pad0 bg-transparent">
   <div class="row bg-white">
-    <div class="col col-center"><span>{{data | date:'dd/MM/yyyy - HH:mm'}}</span></div>
+    <div class="col col-center"><span>{{data | date:'dd/MM/yyyy - HH:mm'}}<br>{{item.stadiumi.emri}}</span></div>
   </div>
   <div class="row row-top bg-white">
     <div class="col col-center Vllaznia"><img class="rank" ng-src="http://www.albaniasoccer.com/{{item.logo1}}"><br>{{item.team1}}</div>
@@ -31,7 +32,7 @@
                     <div ng-if="timer>45" class="pie fill" style="-webkit-transform: rotate({{360*timer/90}}deg);"></div>
                 </div>-->
                 <div easypiechart options="options" percent="percent"></div>
-                <span class="percent">{{minuta}}</span>
+                <span class="percent">{{item.minuta}}</span>
             </div>
         </div>
     </div>

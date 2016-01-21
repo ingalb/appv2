@@ -6,7 +6,7 @@
      <div>
      <ion-slide-box show-pager="true" does-continue="true" slide-interval="5000" disable-scroll="false">
         <ion-slide ng-repeat="slide in slider">
-            <a href="#/app/lajmi/{{$index + 1}}">
+            <a ui-sref="app.lajmi({lajmiId: '{{$index + 1}}'})" href="#/app/lajmi/{{$index + 1}}">
                <img class="slider-img" ng-src="http://www.fkvllaznia.net/main/vllaznia/_files/newspublish/{{slide.image}}">
                <div class="slider-text">
                    {{slide.title}}
@@ -26,7 +26,7 @@
            </div>
          </div>
          <div class="rnk" ng-repeat="ndeshje in items">
-           <div ng-click="go('{{ndeshje.id}}')">
+           <div ui-sref="app.ndeshja({ndeshjaId: '{{ndeshje.id}}'})" ng-click="go('{{ndeshje.id}}')">
                <div class="row">
                	   <div class="col col-center"><span>{{ndeshje.data | indexData}}</span></div>
                </div>
@@ -55,6 +55,11 @@
       <div class="padding item item-body">
          {{teksti}}
       </div>
+	  <div class="padding">
+        <button ng-show="lajmi" ng-click="CloseNotification()" ui-sref="app.lajmi({lajmiId: '1'})" class="button button-block button-assertive">
+           Lexo lajmin e plot&euml;
+        </button>
+	  </div>
     </ion-content>
   </ion-modal-view>
 </script>

@@ -12,48 +12,25 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 
         ga_storage._setAccount('UA-2341193-9');
         ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js');
+		navigator.splashscreen.hide();
        //ga_storage._trackPageview('#/app/klasifikimi', 'Vllaznia App klasifikimi');
 
-var ad_units = {
-    ios : {
+    var ad_units = {
+      ios : {
         banner:"32016490754_10152997301780755",
-        interstitial:"32016490754_10152997301780755",
-        native: "32016490754_10152999183665755"
-    },
-    android : {
+        interstitial:"32016490754_10152997301780755"
+      },
+      android : {
         banner:"32016490754_10152997570155755",
-        interstitial:"32016490754_10152997301780755",
-        native: "32016490754_10152999183665755"
-    }
-};
+        interstitial:"32016490754_10152997301780755"
+      }
+    };
 
-var adid = ad_units.android;
+    var adid = ad_units.android;
 
-if(FacebookAds) FacebookAds.setOptions({
-    isTesting: false
-});
-
-if(FacebookAds){
-  // FacebookAds.createBanner( adid.banner );
-   //alert("banner");
- }
-FacebookAds.prepareInterstitial( {adId:adid.interstitial, autoShow:true} );
-FacebookAds.createNativeAd(adid.native);
-FacebookAds.showBannerAtXY(0, 360);
-// show the interstitial later, e.g. at end of game level
-FacebookAds.showInterstitial();
-
-        admob.setOptions({
-            publisherId: "ca-app-pub-7925487268042880/6770099564",  // Required
-            interstitialAdId: "ca-app-pub-7925487268042880/7097196767",
-            autoShowInterstitial: false
-          });
-
-      //  admob.createBannerView();
-      //  admob.requestInterstitialAd();
-
+    admob.initAdmob("ca-app-pub-7925487268042880/6770099564","ca-app-pub-7925487268042880/7097196767");
     } catch (e) {
-          alert(e.message);
+          console.log(e.message);
     }
 
     var notificationOpenedCallback = function(jsonData) {
@@ -68,7 +45,7 @@ FacebookAds.showInterstitial();
                                    {googleProjectNumber: "455582282730"},
                                    notificationOpenedCallback);
 
-    window.plugins.OneSignal.sendTags({version: "2"});
+     window.plugins.OneSignal.sendTags({app: "v3", news: "true"});
 /*
 window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
                        {googleProjectNumber: "455582282730"},
