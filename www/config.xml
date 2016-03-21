@@ -2,8 +2,8 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id = "com.vllaznia.app"
-        versionCode = "1"
-        version = "1.0">
+        versionCode = "2"
+        version = "1.1">
     <name>Vllaznia App</name>
 
     <description>
@@ -24,10 +24,10 @@
 	<gap:plugin name="org.apache.cordova.splashscreen" />
 
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
-	<!--<plugin name="cordova-plugin-whitelist" version="1" />-->
 
 
-	<gap:plugin name="com-admob-plugin" version="5.2.0" source="npm"/>
+	<!--<gap:plugin name="com-admob-plugin" version="5.2.0" source="npm"/>-->
+	<gap:plugin name="cordova-plugin-admobpro" source="npm" />
 	<gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
 	<!--<gap:plugin name="cordova-plugin-googleplayservices" source="npm" />-->
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
@@ -36,8 +36,9 @@
 
 
     <preference name="permissions"  value="none"/>
-	<uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	
 
     <preference name="phonegap-version"/>
     <preference name="orientation" value="default" />

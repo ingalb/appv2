@@ -11,24 +11,34 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     try{
 
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js');
+        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js IOS');
 		navigator.splashscreen.hide();
-       //ga_storage._trackPageview('#/app/klasifikimi', 'Vllaznia App klasifikimi');
+       
+	    admobid = { 
+             banner: 'ca-app-pub-7925487268042880/5455385567',
+             interstitial: 'ca-app-pub-7925487268042880/6932118769'
+        };
+	   
 
-    var ad_units = {
-      ios : {
-        banner:"32016490754_10152997301780755",
-        interstitial:"32016490754_10152997301780755"
-      },
-      android : {
-        banner:"32016490754_10152997570155755",
-        interstitial:"32016490754_10152997301780755"
-      }
-    };
+    //admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
+	//admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
+	//admob.cacheInterstitial();
 
-    var adid = ad_units.android;
+	
+	AdMob.createBanner( {
+        adId: admobid.banner, 
+        isTesting: false,
+        overlap: false, 
+        offsetTopBar: false, 
+        position: AdMob.AD_POSITION.BOTTOM_CENTER,
+        bgColor: 'red'
+    } );
+    
+    AdMob.prepareInterstitial({
+        adId: admobid.interstitial,
+        autoShow: true
+    });
 
-    admob.initAdmob("ca-app-pub-7925487268042880/6770099564","ca-app-pub-7925487268042880/7097196767");
     } catch (e) {
           console.log(e.message);
     }

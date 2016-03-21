@@ -1,4 +1,4 @@
-var URL_APP = "http://vllaznia.cloudcontrolled.com/";
+var URL_APP = "http://api1.ingalb.info/";
 
 angular.module('vllaznia.services', [])
 

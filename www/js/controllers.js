@@ -198,7 +198,7 @@ angular.module('vllaznia.controllers', [])
 			window.plugins.OneSignal.deleteTag("news");
 		}
         //FacebookAds.showInterstitial();
-	    admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);
+	    //admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);
 		
         LajmeService.getAll(function(data) {
             $scope.lajme = data;
@@ -244,13 +244,19 @@ angular.module('vllaznia.controllers', [])
         $scope.lajmi = LajmeService.getId($stateParams.lajmiId);
         $ionicLoading.hide();
 		
-		admob.cacheInterstitial();
-		admob.showInterstitial();
+		AdMob.prepareInterstitial({
+			adId: 'ca-app-pub-7925487268042880/6932118769',
+			autoShow: true
+		});
+		//AdMob.prepareInterstitial('ca-app-pub-7925487268042880/6932118769');
+        AdMob.showInterstitial();
+		
 		$scope.showAds = function()
 		{
-			console.log("call ads");
-			admob.cacheInterstitial();
-			admob.showInterstitial();
+			AdMob.prepareInterstitial({
+				adId: admobid.interstitial,
+				autoShow: true
+			});
 		}
     })
 
