@@ -647,18 +647,16 @@ angular.module('vllaznia.controllers', [])
 
 
     .controller('TvCtrl', function($scope) {
-          //destroyBannerView();
-          //admob.showBannerAd(false);
-          //admob.showInterstitialAd();
-          //showInterstitialAd();
-          admob.cacheInterstitial();
-		  admob.showInterstitial();
-          ga_storage._trackPageview('#/app/tv', 'Vllaznia App TV');
-          $scope.browse = function(v) {
-            ga_storage._trackEvent('TV', 'Play', v);
-            //admob.showInterstitialAd();
+		ga_storage._trackPageview('#/app/tv', 'Vllaznia App TV');
+        AdMob.prepareInterstitial({
+			adId: 'ca-app-pub-7925487268042880/6932118769',
+			autoShow: true
+		});
+        AdMob.showInterstitial();
+        $scope.browse = function(v){
+          ga_storage._trackEvent('TV', 'Play', v);
             window.open(v, "_system", "location=yes");
-          }
+        }
     })
 
    .controller('ForumiCtrl', function($scope, $timeout, $ionicLoading, ForumiService) {
