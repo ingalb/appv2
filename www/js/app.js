@@ -8,6 +8,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 
 .run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
+    var admobid = {};
     try{
 
         ga_storage._setAccount('UA-2341193-9');
@@ -15,8 +16,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		navigator.splashscreen.hide();
        
 	    admobid = { 
-             banner: 'ca-app-pub-7925487268042880/6770099564',
-             interstitial: 'ca-app-pub-7925487268042880/7097196767'
+            banner: 'ca-app-pub-7925487268042880/6770099564',
+            interstitial: 'ca-app-pub-7925487268042880/7097196767'
         };
 	   
 
