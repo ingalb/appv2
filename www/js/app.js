@@ -16,9 +16,9 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		navigator.splashscreen.hide();
        
 	    admobid = { 
-            banner: 'ca-app-pub-7925487268042880/6770099564',
-            interstitial: 'ca-app-pub-7925487268042880/7097196767'
-        };
+          banner: 'ca-app-pub-7925487268042880/9744485565',
+          interstitial: 'ca-app-pub-7925487268042880/3804502366'
+       };
 	   
 
     //admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
