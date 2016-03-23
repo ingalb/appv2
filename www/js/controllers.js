@@ -150,6 +150,8 @@ angular.module('vllaznia.controllers', [])
 
       $timeout(function(){
         $ionicLoading.hide();
+        AdMob.showBanner(8);
+		console.log("hide loading + show banner");
       },timerhide);
 
       })
@@ -199,7 +201,7 @@ angular.module('vllaznia.controllers', [])
 		}
         //FacebookAds.showInterstitial();
 	    //admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);
-		
+		AdMob.showBanner(8);
         LajmeService.getAll(function(data) {
             $scope.lajme = data;
             //console.log($scope.lajme);
