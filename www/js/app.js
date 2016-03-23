@@ -15,8 +15,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		navigator.splashscreen.hide();
        
 	    admobid = { 
-             banner: 'ca-app-pub-7925487268042880/5455385567',
-             interstitial: 'ca-app-pub-7925487268042880/6932118769'
+             banner: 'ca-app-pub-7925487268042880/6770099564',
+             interstitial: 'ca-app-pub-7925487268042880/7097196767'
         };
 	   
 
@@ -31,7 +31,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         overlap: false, 
         offsetTopBar: false, 
         position: AdMob.AD_POSITION.BOTTOM_CENTER,
-        bgColor: 'red'
+        bgColor: 'black'
     } );
     
     AdMob.prepareInterstitial({
