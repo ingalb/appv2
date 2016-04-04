@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0'" encoding='UTF-8'?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
         id = "com.vllaznia.app"
-        versionCode = "2"
-        version = "1.1">
+        versionCode = "152"
+        version = "2.3">
     <name>Vllaznia App</name>
 
     <description>
@@ -29,7 +29,8 @@
 
 
 	<!--<gap:plugin name="com-admob-plugin" version="5.2.0" source="npm"/>-->
-	<gap:plugin name="cordova-plugin-admobpro" version="2.7.8" source="npm" />
+	<preference name="android-build-tool" value="gradle" /> 
+    <gap:plugin name="cordova-plugin-admobpro" source="npm" />
 	<gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
 	<!--<gap:plugin name="cordova-plugin-googleplayservices" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" />-->
@@ -72,8 +73,7 @@
     <splash src="res/screen/android/mdpi.png" platform="android" qualifier="mdpi" />
     <splash src="res/screen/android/hdpi.png" platform="android" qualifier="hdpi" />
     <splash src="res/screen/android/xhdpi.png" platform="android" qualifier="xhdpi" />
-    <splash src="res/screen/android/portrait-xxhdpi.png" platform="android" qualifier="port-xxhdpi" />
-    <splash src="res/screen/android/xxhdpi.png" platform="android" qualifier="land-xxhdpi" />
+    <splash src="res/screen/android/portrait-xhdpi.png" platform="android" qualifier="port-xhdpi" />
 
     <!-- iPhone 6 / 6+ -->
     <icon src="res/icon/ios/icon-60@3x.png" platform="ios" width="180" height="180" />
