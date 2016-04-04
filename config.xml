@@ -56,10 +56,10 @@
     <preference name="auto-hide-splash-screen" value="true" />
 	<preference name="AutoHideSplashScreen" value="true" />
     <!--	<preference name="splash-screen-duration" value="500000" />-->
-	  <preference name="SplashScreenDelay" value="1000"/>
+	<preference name="SplashScreenDelay" value="1000"/>
 
 
-    <icon src="icon.png" />
+    <!-- <icon src="icon.png" /> -->
     <splash src="splash.png" />
 
 
