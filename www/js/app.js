@@ -56,8 +56,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
                                    {googleProjectNumber: "455582282730"},
                                    notificationOpenedCallback);
 
-    window.plugins.OneSignal.sendTags({app: "v3", news: "true"});
-	window.plugins.OneSignal.setEmail({email:"ingalbi@gmail.com"});
+    window.plugins.OneSignal.sendTags({app: "v2.3", news: "true"});
 /*
 window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
                        {googleProjectNumber: "455582282730"},
