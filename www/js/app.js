@@ -16,8 +16,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		//navigator.splashscreen.hide();
        
 	    admobid = { 
-          banner: 'ca-app-pub-7925487268042880/9744485565',
-          interstitial: 'ca-app-pub-7925487268042880/3804502366'
+          banner: 'ca-app-pub-7925487268042880/6770099564',
+          interstitial: 'ca-app-pub-7925487268042880/7097196767'
        };
 	   
 
@@ -28,7 +28,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 	
 	AdMob.createBanner( {
         adId: admobid.banner, 
-        isTesting: true,
+        isTesting: false,
         overlap: false, 
         offsetTopBar: false, 
         position: AdMob.AD_POSITION.BOTTOM_CENTER,
