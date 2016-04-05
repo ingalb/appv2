@@ -13,7 +13,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 
         ga_storage._setAccount('UA-2341193-9');
         ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js IOS');
-		navigator.splashscreen.hide();
+		//navigator.splashscreen.hide();
        
 	    admobid = { 
           banner: 'ca-app-pub-7925487268042880/9744485565',
@@ -28,7 +28,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 	
 	AdMob.createBanner( {
         adId: admobid.banner, 
-        isTesting: false,
+        isTesting: true,
         overlap: false, 
         offsetTopBar: false, 
         position: AdMob.AD_POSITION.BOTTOM_CENTER,
@@ -50,13 +50,17 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
       // firing an event downwards
       $rootScope.$broadcast('pushEvent', jsonData);
     };
-
+	
+    window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+	
     // Update with your OneSignal AppId and googleProjectNumber before running.
     window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
                                    {googleProjectNumber: "455582282730"},
                                    notificationOpenedCallback);
 
     window.plugins.OneSignal.sendTags({app: "v2.3", news: "true"});
+	window.plugins.OneSignal.setSubscription(true);
+	
 /*
 window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
                        {googleProjectNumber: "455582282730"},
