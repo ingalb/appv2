@@ -40,8 +40,8 @@
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
-    <preference name="android-minSdkVersion"      value="10" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
-    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="android-minSdkVersion"  value="10" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-installLocation" value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
@@ -64,7 +64,6 @@
     <splash src="res/screen/android/mdpi.png" platform="android" qualifier="mdpi" />
     <splash src="res/screen/android/hdpi.png" platform="android" qualifier="hdpi" />
     <splash src="res/screen/android/xhdpi.png" platform="android" qualifier="xhdpi" />
-    <splash src="res/screen/android/portrait-xhdpi.png" platform="android" qualifier="port-xhdpi" />
 
     <!-- iPhone 6 / 6+ -->
     <icon src="res/icon/ios/icon-60@3x.png" platform="ios" width="180" height="180" />
@@ -122,6 +121,8 @@
     <access origin="fkvllaznia.net" subdomains="true"/>
     <access origin="vllaznia.cloudcontrolled.com/" subdomains="true"/>
     <access origin="googleapis.com" subdomains="true"/>
+	<access origin="google.com" subdomains="true"/>
+	
 
 	<allow-navigation href="*" />
     <allow-intent href="http://*/*" />

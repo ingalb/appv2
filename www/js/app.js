@@ -1,3 +1,5 @@
+var URL_APP = "http://api1.ingalb.info/";
+
 // Ionic Starter App
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
@@ -13,7 +15,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 
         ga_storage._setAccount('UA-2341193-9');
         ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js IOS');
-		//navigator.splashscreen.hide();
+		navigator.splashscreen.hide();
        
 	    admobid = { 
           banner: 'ca-app-pub-7925487268042880/6770099564',
