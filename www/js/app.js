@@ -39,7 +39,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     
     AdMob.prepareInterstitial({
         adId: admobid.interstitial,
-        autoShow: true
+        autoShow: false
     });
 
     } catch (e) {
@@ -53,7 +53,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
       $rootScope.$broadcast('pushEvent', jsonData);
     };
 	
-    window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+    //window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 	
     // Update with your OneSignal AppId and googleProjectNumber before running.
     window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
