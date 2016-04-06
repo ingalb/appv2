@@ -161,8 +161,8 @@ angular.module('vllaznia.controllers', [])
         //AdMob.showBanner(8);
 		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
 		//window.admob.showInterstitial();
-		admob.showBannerAd(true);
-		admob.showInterstitialAd();
+		AdMob.showBannerAd(true);
+		AdMob.showInterstitialAd();
 		console.log("hide loading + show banner");
       },timerhide);
 
