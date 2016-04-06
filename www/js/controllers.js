@@ -44,7 +44,7 @@ angular.module('vllaznia.controllers', [])
            navigator.splashscreen.hide();
         }
 		
-		if(window.admob){
+		if(admob){
            console.log("definito");
         }
 		else{
@@ -159,8 +159,10 @@ angular.module('vllaznia.controllers', [])
       $timeout(function(){
         $ionicLoading.hide();
         //AdMob.showBanner(8);
-		window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
-		window.admob.showInterstitial();
+		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
+		//window.admob.showInterstitial();
+		admob.showBannerAd(true);
+		admob.showInterstitialAd();
 		console.log("hide loading + show banner");
       },timerhide);
 
@@ -212,7 +214,8 @@ angular.module('vllaznia.controllers', [])
         //FacebookAds.showInterstitial();
 	    //admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);
 		//AdMob.showBanner(8);
-		window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
+		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
+		admob.showBannerAd(true);
         LajmeService.getAll(function(data) {
             $scope.lajme = data;
             //console.log($scope.lajme);
@@ -263,13 +266,18 @@ angular.module('vllaznia.controllers', [])
 		}); */
 		//AdMob.prepareInterstitial('ca-app-pub-7925487268042880/6932118769');
         //AdMob.showInterstitial();
-		window.admob.cacheInterstitial();
-		window.admob.showInterstitial();
+		//window.admob.cacheInterstitial();
+		//window.admob.showInterstitial();
+		admob.requestInterstitialAd();
+		admob.showInterstitialAd();
 		
 		$scope.showAds = function()
 		{
-			window.admob.cacheInterstitial();
-			window.admob.showInterstitial();
+			//window.admob.cacheInterstitial();
+			//window.admob.showInterstitial();
+			admob.requestInterstitialAd();
+			admob.showInterstitialAd();
+			
 /* 			AdMob.prepareInterstitial({
 				adId: admobid.interstitial,
 				autoShow: true
@@ -671,8 +679,10 @@ angular.module('vllaznia.controllers', [])
 		});
         AdMob.showInterstitial(); */
 		
-		window.admob.cacheInterstitial();
-		window.adMob.showInterstitial();
+		//window.admob.cacheInterstitial();
+		//window.adMob.showInterstitial();
+		admob.requestInterstitialAd();
+		admob.showInterstitialAd();
 		
         $scope.browse = function(v){
           ga_storage._trackEvent('TV', 'Play', v);

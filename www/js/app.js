@@ -23,10 +23,25 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
        };
 	   
 
-    window.admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
+   /*  window.admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
 	window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
-	window.admob.cacheInterstitial();
+	window.admob.cacheInterstitial(); */
 
+	admob.setOptions({
+      publisherId: admobid.banner,
+      interstitialAdId: admobid.interstitial,
+      bannerAtTop: false, // set to true, to put banner at top
+      overlap: false, // set to true, to allow banner overlap webview
+      offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
+      isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)
+      autoShowBanner: true, // auto show banners ad when loaded
+      autoShowInterstitial: true // auto show interstitials ad when loaded
+    });
+	
+	admob.createBannerView();
+
+    // Request interstitial (will present automatically when autoShowInterstitial is set to true)
+    admob.requestInterstitialAd();
 	
 /* 	AdMob.createBanner( {
         adId: admobid.banner, 
