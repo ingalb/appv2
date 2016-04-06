@@ -43,6 +43,14 @@ angular.module('vllaznia.controllers', [])
         if(navigator.splashscreen){
            navigator.splashscreen.hide();
         }
+		
+		if(window.admob){
+           console.log("definito");
+        }
+		else{
+			console.log("non definito!");
+		}
+		
 
         $scope.CloseNotification = function() {
            $scope.modal.hide();
@@ -151,8 +159,8 @@ angular.module('vllaznia.controllers', [])
       $timeout(function(){
         $ionicLoading.hide();
         //AdMob.showBanner(8);
-		admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
-		admob.showInterstitial();
+		window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
+		window.admob.showInterstitial();
 		console.log("hide loading + show banner");
       },timerhide);
 
@@ -204,7 +212,7 @@ angular.module('vllaznia.controllers', [])
         //FacebookAds.showInterstitial();
 	    //admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);
 		//AdMob.showBanner(8);
-		admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
+		window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
         LajmeService.getAll(function(data) {
             $scope.lajme = data;
             //console.log($scope.lajme);
@@ -255,13 +263,13 @@ angular.module('vllaznia.controllers', [])
 		}); */
 		//AdMob.prepareInterstitial('ca-app-pub-7925487268042880/6932118769');
         //AdMob.showInterstitial();
-		admob.cacheInterstitial();
-		admob.showInterstitial();
+		window.admob.cacheInterstitial();
+		window.admob.showInterstitial();
 		
 		$scope.showAds = function()
 		{
-			admob.cacheInterstitial();
-			admob.showInterstitial();
+			window.admob.cacheInterstitial();
+			window.admob.showInterstitial();
 /* 			AdMob.prepareInterstitial({
 				adId: admobid.interstitial,
 				autoShow: true
@@ -663,8 +671,8 @@ angular.module('vllaznia.controllers', [])
 		});
         AdMob.showInterstitial(); */
 		
-		admob.cacheInterstitial();
-		adMob.showInterstitial();
+		window.admob.cacheInterstitial();
+		window.adMob.showInterstitial();
 		
         $scope.browse = function(v){
           ga_storage._trackEvent('TV', 'Play', v);

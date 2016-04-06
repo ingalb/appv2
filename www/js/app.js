@@ -23,9 +23,9 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
        };
 	   
 
-    admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
-	admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
-	admob.cacheInterstitial();
+    window.admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
+	window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
+	window.admob.cacheInterstitial();
 
 	
 /* 	AdMob.createBanner( {
@@ -43,7 +43,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     }); */
 
     } catch (e) {
-          console.log(e.message);
+        console.log(e.message);
     }
 	
     var notificationOpenedCallback = function(jsonData) {
@@ -85,7 +85,7 @@ window.plugins.OneSignal.getIds(function(ids) {
 
     document.addEventListener("admob.Event.onInterstitialReceive", function() {
         console.log("The application is recieve interstial ready");
-		admob.showInterstitial();
+		window.admob.showInterstitial();
     }, false);
 
     if(window.cordova && window.cordova.plugins.Keyboard) {
