@@ -83,6 +83,10 @@ window.plugins.OneSignal.getIds(function(ids) {
     }
 */
 
+    document.addEventListener("admob.Event.onInterstitialReceive", function() {
+        console.log("The application is recieve interstial ready");
+		admob.showInterstitial();
+    }, false);
 
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
