@@ -1,5 +1,3 @@
-var P_ID = 109;
-var EKIPI_ID = 4;
 var URL_APP = "http://api1.ingalb.info/";
 
 // Ionic Starter App
@@ -7,29 +5,30 @@ var URL_APP = "http://api1.ingalb.info/";
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var albania = angular.module('albania', ['ionic', 'albania.services', 'albania.controllers', 'easypiechart', 'ngSanitize', 'admobModule'])
+angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers', 'easypiechart', 'ngSanitize', 'admobModule'])
 //angular.module('starter', ['angular-carousel'])
 
 .run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
-   var admobid = {};
-   try{
-          ga_storage._setAccount('UA-70272201-2');
-          ga_storage._trackPageview('#/app/appJS', 'Albania App load v1.2');
-		  navigator.splashscreen.hide();
-    
+    var admobid = {};
+    try{
+
+        ga_storage._setAccount('UA-2341193-9');
+        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js Android v2.3');
+		navigator.splashscreen.hide();
+       
 	    admobid = { 
-          banner: 'ca-app-pub-7925487268042880/9744485565',
-          interstitial: 'ca-app-pub-7925487268042880/3804502366'
+          banner: 'ca-app-pub-7925487268042880/6770099564',
+          interstitial: 'ca-app-pub-7925487268042880/7097196767'
        };
 	   
 
-    //admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
-	//admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
-	//admob.cacheInterstitial();
+    admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
+	admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
+	admob.cacheInterstitial();
 
 	
-	AdMob.createBanner( {
+/* 	AdMob.createBanner( {
         adId: admobid.banner, 
         isTesting: false,
         overlap: false, 
@@ -40,30 +39,52 @@ var albania = angular.module('albania', ['ionic', 'albania.services', 'albania.c
     
     AdMob.prepareInterstitial({
         adId: admobid.interstitial,
-        autoShow: true
-    });
-    
+        autoShow: false
+    }); */
+
     } catch (e) {
           console.log(e.message);
-		  //alert(e.message);
     }
-
+	
     var notificationOpenedCallback = function(jsonData) {
       //alert("Notification received:\n" + JSON.stringify(jsonData));
       //console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
       // firing an event downwards
       $rootScope.$broadcast('pushEvent', jsonData);
     };
+		
     //window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+	
     // Update with your OneSignal AppId and googleProjectNumber before running.
-    window.plugins.OneSignal.init("989f0128-8884-11e5-bfb9-a0369f2d9328",
-                                   {googleProjectNumber: "656349133735",
-								    autoRegister: true},
-                                    notificationOpenedCallback);
+    window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
+                                   {googleProjectNumber: "455582282730"},
+                                   notificationOpenedCallback);
 
-    window.plugins.OneSignal.sendTags({app: "euro2016", news: "true"});
+    window.plugins.OneSignal.sendTags({app: "v2.3", news: "true"});
+	window.plugins.OneSignal.setSubscription(true);
+	
+/*
+window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
+                       {googleProjectNumber: "455582282730"},
+                       didReceiveRemoteNotificationCallBack);
 
-   if(window.cordova && window.cordova.plugins.Keyboard) {
+
+window.plugins.OneSignal.getIds(function(ids) {
+    console.log('getIds: ' + JSON.stringify(ids)); // I can see PushToken and UserId in the console.
+    window.localStorage["notification"] = JSON.stringify(jsonData);
+    //$rootScope.pushToken = ids.pushToken;
+});
+*/
+
+/*    window.didReceiveRemoteNotificationCallBack = function(jsonData) {
+        alert("Notification received:\n" + JSON.stringify(jsonData));
+        window.localStorage["notification"] = JSON.stringify(jsonData);
+        console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+    }
+*/
+
+
+    if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
     if(window.StatusBar) {
@@ -112,7 +133,7 @@ var albania = angular.module('albania', ['ionic', 'albania.services', 'albania.c
       }
     })
     .state('app.ndeshjet', {
-      url: "/ndeshjet/:grId",
+      url: "/ndeshjet",
       views: {
         'menuContent' :{
           templateUrl: "templates/ndeshjet.html",
@@ -129,30 +150,57 @@ var albania = angular.module('albania', ['ionic', 'albania.services', 'albania.c
         }
       }
     })
-    .state('app.grupet', {
-      url: "/grupet",
+
+    .state('app.klubi', {
+      url: "/klubi",
       views: {
         'menuContent' :{
-          templateUrl: "templates/grupet.html",
-          controller: 'AllGrupetCtrl'
+          templateUrl: "templates/klubi.html",
+          controller: 'KlubiCtrl'
         }
       }
     })
-	.state('app.finalet', {
-      url: "/finalet",
+    .state('app.tv', {
+      url: "/tv",
       views: {
         'menuContent' :{
-          templateUrl: "templates/faza-finale.html",
-          controller: 'AllFazatCtrl'
+          templateUrl: "templates/tv.html",
+          controller: 'TvCtrl'
         }
       }
     })
-    .state('app.gr', {
-      url: "/gr/:grId",
+    .state('app.forumi', {
+      url: "/forumi",
       views: {
         'menuContent' :{
-          templateUrl: "templates/gr.html",
-          controller: 'GrupetCtrl'
+          templateUrl: "templates/forumi.html",
+          controller: 'ForumiCtrl'
+        }
+      }
+    })
+    .state('app.multimedia', {
+      url: "/multimedia",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/multimedia.html"
+        }
+      }
+    })
+    .state('app.klasifikimi', {
+      url: "/klasifikimi",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/klasifikimi.html",
+          controller: 'KlasifikimiCtrl'
+        }
+      }
+    })
+    .state('app.klasifikimidet', {
+      url: "/klasifikimidet/:klasifikimiId",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/klasifikimidet.html",
+          controller: 'KlasifikimiDetCtrl'
         }
       }
     })
@@ -160,18 +208,8 @@ var albania = angular.module('albania', ['ionic', 'albania.services', 'albania.c
       url: "/ekipi",
       views: {
         'menuContent' :{
-          templateUrl: "templates/lojtaret1.html",
-          controller: 'Lojtaret1Ctrl'
-        }
-      }
-    })
-	
-	.state('app.ekipi1', {
-      url: "/ekipi1",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/lojtaret1.html",
-          controller: 'Lojtaret1Ctrl'
+          templateUrl: "templates/lojtaret.html",
+          controller: 'LojtaretCtrl'
         }
       }
     })
@@ -181,16 +219,6 @@ var albania = angular.module('albania', ['ionic', 'albania.services', 'albania.c
       views: {
         'menuContent' :{
           templateUrl: "templates/credits.html"
-        }
-      }
-    })
-
-	.state('app.settings', {
-      url: "/settings",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/settings.html",
-		  controller: 'SettingsCtrl'
         }
       }
     })
@@ -207,38 +235,3 @@ var albania = angular.module('albania', ['ionic', 'albania.services', 'albania.c
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/index');
 });
-
-
-albania.directive('newsHome', ['$compile', 'LajmeService', function($compile, LajmeService){
-    return {
-        restrict: 'CAE',
-		templateUrl: 'templates/lajme-home.html',
-        link: function (scope, element, attrs) {
-			LajmeService.getSlider(function(data) {
-            scope.lajme = data;
-            });
-        }
-    }
- }]);
-
-albania.directive('countdown', ['Util','$interval', function (Util, $interval) {
-            return {
-                restrict: 'A',
-                scope: { date: '@' },
-                link: function (scope, element) {
-                    var future;
-                    future = new Date(scope.date);
-					//console.log(scope.date);
-                    $interval(function () {
-                        var diff;
-                        diff = Math.floor((future.getTime() - new Date().getTime()) / 1000);
-						//var test = Util.dhms(diff);
-						//console.log(test);
-                        return element.html(Util.dhms(diff));
-                    }, 1000);
-                }
-            };
-        }
-]);
- 
-	

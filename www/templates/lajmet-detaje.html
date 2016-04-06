@@ -3,21 +3,23 @@
     <button menu-toggle="left" ng-click="showAds()" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-  <img class="full-image lajmi-img" src="http://www.albaniasoccer.com/{{lajmi.image}}">
+  <img class="full-image lajmi-img" src="http://www.fkvllaznia.net/main/vllaznia/_files/newspublish/{{lajmi.image}}">
   <div class="item item-body">
 
     <h2 class="lajmi-titulli assertive">{{lajmi.title}}</h2>
     <p data-ng-bind-html="lajmi.content"></p>
   </div>
-  <div class="item tabs tabs-secondary statistika tabs-icon-left item-dark">
-    <a class="tab-item tab-color-light">
+
+  <div class="item tabs tabs-secondary tabs-icon-left klasifikimi-header">
+    <a class="tab-item">
       <i class="icon ion-ios-calendar-outline"></i>
-      {{lajmi.data | lajmeData}}
+      {{lajmi.data}}
     </a>
-    <a class="tab-item" ng-click="shareL('Lexo lajmin', '{{lajmi.title}}', 'http://www.albaniasoccer.com/{{lajmi.image}}', 'http://www.albaniasoccer.com/{{lajmi.link}}')">
+    <a class="tab-item" ng-click="shareL('Lexo lajmin per Vllaznine', '{{lajmi.title}}', 'http://www.fkvllaznia.net/main/vllaznia/_files/newspublish/{{lajmi.image}}', 'http://www.fkvllaznia.net/lajme/{{lajmi.id}}-mobile.html')">
       <i class="icon ion-share"></i>
       Share
     </a>
   </div>
+
   </ion-content>
 </ion-view>

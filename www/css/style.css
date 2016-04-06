@@ -120,173 +120,46 @@ body{
 	stroke: #EE1C24;
 }
 
-#menu .sfondm{
-	background-image: linear-gradient(90deg, rgb(192, 57, 43) 25%, rgb(44, 62, 80) 100%);
-	background-image: -moz-linear-gradient(left, rgb(192, 57, 43) 25%, rgb(44, 62, 80) 100%);
-	background-image: -webkit-linear-gradient(left, rgb(192, 57, 43) 25%, rgb(44, 62, 80) 100%);background-image: -o-linear-gradient(left, rgb(192, 57, 43) 25%, rgb(44, 62, 80) 100%);
-	background-image: -ms-linear-gradient(left, rgb(192, 57, 43) 25%, rgb(44, 62, 80) 100%);
+#sfondi {
+    margin: 0 auto;
+/** padding: 10px; **/
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("http://www.ingalb.info/vllazniam/mobile/themes/vllaznia/images/sfond-vllaznia1.jpg");
+    background-origin: padding-box;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-#menu .item-content {
-	background-color: transparent;
-}
-#menu .item {
-	background-color: transparent;
-	border-bottom-color: rgba(204, 51, 51, 0.64);
-	border-top-color:transparent;
-}
-#menu .scroll-content{
-/*	background-image: linear-gradient(180deg, rgb(231, 76, 60) 38%, rgb(192, 57, 43) 100%);
-	background-image: -moz-linear-gradient(top, rgb(231, 76, 60) 38%, rgb(192, 57, 43) 100%);
-	background-image: -webkit-linear-gradient(top, rgb(231, 76, 60) 38%, rgb(192, 57, 43) 100%);
-	background-image: -o-linear-gradient(top, rgb(231, 76, 60) 38%, rgb(192, 57, 43) 100%);
-	background-image: -ms-linear-gradient(top, rgb(231, 76, 60) 38%, rgb(192, 57, 43) 100%); */
-	background-image: linear-gradient(90deg, rgb(226, 6, 6) 21%, rgb(157, 4, 4) 100%);background-image: -moz-linear-gradient(left, rgb(226, 6, 6) 21%, rgb(157, 4, 4) 100%);background-image: -webkit-linear-gradient(left, rgb(226, 6, 6) 21%, rgb(157, 4, 4) 100%);background-image: -o-linear-gradient(left, rgb(226, 6, 6) 21%, rgb(157, 4, 4) 100%);background-image: -ms-linear-gradient(left, rgb(226, 6, 6) 21%, rgb(157, 4, 4) 100%);
-}
-
-#menu .scroll-content:before {
-  z-index: -1;
-  background: url("../img/pattern_nb.png") repeat center top;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  content: '';
-  display: block;
-}
-
-.side-menu-logo {
-  margin: 30px 0;
-  text-align: center;
-}
-.side-menu-logo .logo {
-    font-family: 'Montserrat';
-    font-size: 24px;
-    text-transform: uppercase;
-    display: inline-block;
-	color: #FFF;
-	text-decoration: none;
-	font-weight: bold;
-}
-.logo-fshf{
-	width:148px;
-	max-height:130px;
-}
 .scroll-content {
     background-attachment: scroll;
     background-clip: border-box;
-    background: url("../img/pattern_nb.png") repeat center top #E0DFE2;
+    background-color: transparent;
+    background-image: url("http://www.ingalb.info/vllazniam/mobile/themes/vllaznia/images/sfond-vllaznia1.jpg");
     background-origin: padding-box;
+    background-position: center top;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
-#grupet .tab-item{
-	max-width:100%;
-}
-
-#grupet .tab-item.active, .tab-item.activated,.tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated{
-	border-bottom-color: #EE1C24;
-  font-weight: bold;
-}
-
-#grupet .has-subheader{
-	top: 88px;
-}
-
-#grupet .ranking{
-	border-bottom: 1px rgba(162, 162, 162, 0.50) solid;
-}
-#grupet .row + .row {
-	margin-top: 0px;
-}
-#grupet .row {
-	padding: 6px 5px 5px 5px;
-}
-#grupet .slider-slide img{
-  width: auto;
-}
-#match .tabs{
-	top:inherit;
-	bottom: inherit;
-}
-
-#match .list{
-	margin-bottom:2px;
-}
-
-.slide-bg{
-	background-image: linear-gradient(180deg, rgb(76, 0, 0, 0.59) 28%, rgb(17, 17, 17, 0.70) 100%);
-	background-image: -moz-linear-gradient(top, rgb(76, 0, 0, 0.59) 28%, rgb(17, 17, 17, 0.70) 100%);
-	background-image: -webkit-linear-gradient(top, rgb(76, 0, 0, 0.59) 28%, rgb(17, 17, 17, 0.70) 100%);
-	background-image: -o-linear-gradient(top, rgb(76, 0, 0, 0.59) 28%, rgb(17, 17, 17, 0.70) 100%);
-	background-image: -ms-linear-gradient(top, rgb(76, 0, 0, 0.59) 28%, rgb(17, 17, 17, 0.70) 100%);
-}
 .slider-img {
   height: 180px;
 }
 .lajmi-img {
   height: 200px;
 }
-.slider-logo {
-	max-height:200px;
-	max-width: 200px;
-}
 .lajmi-titulli{font-weight:bold;}
 
-.titleI{
-	display: inline-block;
-    width: 100%;
-    background: rgba(23, 23, 23, 0.4);
-    padding-top: 5px;
-    padding-bottom: 5px;
-	color: #EE1C24;
-	bottom:0;
-	font-weight: bold;
-	text-align: center;
-}
-.bg-image1{
-	height:  150px;
-	background-size : cover;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  position:relative;
-}
-
-#lajme-index .bg-image{
-	height:  150px;
-	background-size : cover;
-    background-position-x: 50%;
-    background-position-y: 50%;
-}
-#lajme-index .title{
-	display: inline-block;
-    width: 100%;
-    background: rgba(23, 23, 23, 0.4);
-    padding-top: 5px;
-    padding-bottom: 5px;
-	color: #EE1C24;
-	font-weight: bold;
-	bottom:0;
-}
-#title{
-	bottom:0;
-	position:absolute;
-}
-#lajme-index .row + .row {
-	margin-top: 0px;
-}
-#lajme-index {
-	margin-top: 0px;
-	position: relative;
-}
 @media screen and (min-height: 500px) {
   .slider-img {
     height: 280px;
   }
-  .lajmi-img {
-    height: 300px;
-  }
+.lajmi-img {
+  height: 300px;
+}
 }
 .slider-slide img { width: 100%; }
 
@@ -318,11 +191,11 @@ body{
   white-space: nowrap;
  }
 .rank-12, .rank-11, .rank-10, .rank-9 {background-color:#cc3333; color:#FFF;}
-.rank-1, .rank-2{background-color:#0099cc; color:#FFF;}
-.rank-3{background-color:#ff9900; color:#FFF;}
+.rank-1{background-color:#0099cc; color:#FFF;}
+.rank-2, .rank-3{background-color:#ff9900; color:#FFF;}
 .rnk:nth-child(odd){background:#ededed;}
 .rnk:nth-child(even){background:#fff;}
-.col-center1{text-align:center;}
+.col-center{text-align:center;}
 .col-left{text-align:left;}
 .col-right{text-align:right;}
 .col-30px{width:30px;}
@@ -331,35 +204,13 @@ body{
 .rez{font-weight:bold;text-decoration:none;color:#444;font-size:20px;}
 .rezultati{font-weight:bold;text-decoration:none;color:#444;font-size:28px;}
 .live{padding-top:10px;}
-
-.match-logo {
-	max-height:100px;
-	max-width: 100px;
-}
-
-@media screen and (min-width: 500px) {
-.match-logo {
-	max-height:200px;
-	max-width: 200px;
-}
-}
-
-@media screen and (max-width: 310px) {
-.item {
-white-space:normal;
-}
-}
-
-#match .slider-slide{
-	height:100%;
-}
 .minuta{
      width:0;
      height:0;
      background-color:#cc3333;
      color: #FFF;
      font-weight:bold;
-     padding:4px;
+     padding:2px;
      z-index: 601;
      border-radius:3px;
 }
@@ -407,7 +258,7 @@ white-space:normal;
 			-o-transform:rotate(180deg) !important;
 			transform:rotate(180deg) !important;
 		}
-#ev0{  z-index: -1; width: 5px; height: 100%; border-color: #000000; background-color: #000; position: absolute; left: 50%; }
+#ev0{  z-index: -1; width: 5px; height: 100%; border-color: #000000; background-color: #145fd7; position: absolute; left: 50%; }
 #minuta{z-index: 333;}
 .eventi{
 	border-radius:3px;
@@ -488,24 +339,24 @@ white-space:normal;
 .trofe{border-bottom: 1px solid #ededed; padding:5px;font-size:14px;}
 div#klubi div.trofe:last-child {border-bottom: none;}
 .bluza {
-	  color: #EE1C24;
-    font-size: 28px;
+    background-image: url("../img/bluza.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: arial;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
-    width:50px;
-    height: 50px;
-    padding-top: 7px;
+    width:40px;
+    height: 40px;
+    padding-top: 14px;
     right: 20px;
     top: 16px;
     position: absolute;
-	border: 7px solid #000;
-	border-radius: 30px;
-	-webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
 }
 .lojtari-img{
   width:100%;
-  height: 280px;
+  height: 220px;
  -webkit-transform:scale(1,1);
     -webkit-transform-origin: top right;
     -moz-transform:scale(1,1);
@@ -517,15 +368,12 @@ div#klubi div.trofe:last-child {border-bottom: none;}
 }
 
 .lojtari-emri{
-/*position: absolute;
-top: 180px;*/
+position: absolute;
+top: 180px;
 text-align: center;
 width: 100%;
-border-color:#930d0d;
-background-color:#c21111;
-background-image:linear-gradient(0deg,#930d0d,#930d0d 50%,transparent 50%);
-background-size: 0;
-margin-top: -6px;
+background-color: #EC1919;
+box-shadow: 0px -20px 47px #EC1919;
 }
 .lojtari-titull{
 color:#FFF;
@@ -533,7 +381,6 @@ font-weight: bold;
 }
 .statistika{
 font-size:24px;
-margin: 0px;
 }
 .width-10{max-width:32px;}
 .ikona{
@@ -551,48 +398,13 @@ margin: 0px;
    background:url("../img/karton-vk2x.png") no-repeat;
 }
 .ndeshje2x{
-   background:url("../img/matches.png") no-repeat;
+   background:url("../img/ndeshje.png") no-repeat;
 }
 .gol2x{
    background:url("../img/goal2x.png") no-repeat;
    padding-left: 30px;
 }
 .scroll-refresher{height:50px;}
-.live1{
-	border-bottom: 5px #33cd5f solid;
-	animation: blinker 1s linear infinite;
-	-webkit-animation : blinker 1s linear infinite;
-}
-
-@-webkit-keyframes blinker {
-   50% {border-bottom: 5px solid rgba(0, 0, 0, 0.0) }
-}
-@keyframes blinker {
-  50% {border-bottom: 5px solid rgba(0, 0, 0, 0.0) }
-}
-.sliderlive2{
-	background-color: #EE1C24;
-	color: #fff;
-}
-
-.sliderlive1{
-	background-color: #33cd5f;
-	color: #fff;
-	animation: blinkerS 1s linear infinite;
-	-webkit-animation : blinkerS 1s linear infinite;
-}
-
-@-webkit-keyframes blinkerS {
-   40% {background-color: rgba(0, 0, 0, 0.0) }
-}
-@keyframes blinkerS {
-  40% {background-color: rgba(0, 0, 0, 0.0) }
-}
-
-.gr-scroll{
-	margin-bottom:100px;
-}
-
 .slideDown{
 	animation-name: slideDown;
 	-webkit-animation-name: slideDown;
@@ -875,301 +687,4 @@ pullDown
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
-}
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@keyframes zoomInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
-    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
-    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-  }
-}
-
-.zoomInLeft {
-  -webkit-animation-name: zoomInLeft;
-  animation-name: zoomInLeft;
-}
-
-@-webkit-keyframes zoomInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
-    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
-    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-  }
-}
-
-@keyframes zoomInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
-    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
-    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-  }
-}
-
-.zoomInRight {
-  -webkit-animation-name: zoomInRight;
-  animation-name: zoomInRight;
-}
-
-@-webkit-keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-  }
-
-  30% {
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.3, .3, .3);
-    transform: scale3d(.3, .3, .3);
-  }
-
-  30% {
-    opacity: 1;
-  }
-}
-
-.zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-
-@-webkit-keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-  }
-}
-
-@keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-  }
-}
-
-.zoomInUp {
-  -webkit-animation-name: zoomInUp;
-  animation-name: zoomInUp;
-}
-
-@-webkit-keyframes zoomInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-  }
-}
-
-@keyframes zoomInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
-  }
-}
-
-.zoomInDown {
-  -webkit-animation-name: zoomInDown;
-  animation-name: zoomInDown;
-}
-
-.popover {
-    height: auto !important;
-}
-.popover ion-header-bar {
-    position: relative;
-}
-.popover ion-content {
-    top: 0;
-    position: relative;
-}
-.countdownHolder{
-	width:450px;
-	margin:0 auto;
-	font: 40px/1.5 'Open Sans Condensed',sans-serif;
-	text-align:center;
-	letter-spacing:-3px;
-}
-
-.position{
-	display: inline-block;
-	height: 1.6em;
-	overflow: hidden;
-	position: relative;
-	width: 1.05em;
-	margin-right: -5px;
-}
-
-.digit{
-	position:absolute;
-	display:block;
-	width:1em;
-	background-color:#444;
-	border-radius:0.2em;
-	text-align:center;
-	color:#fff;
-	/**letter-spacing:-1px;**/
-}
-
-.digit.static{
-	box-shadow:1px 1px 1px rgba(4, 4, 4, 0.35);
-
-	background-image: linear-gradient(bottom, #930d0d 50%, #c21111 50%);
-	background-image: -o-linear-gradient(bottom, #930d0d 50%, #c21111 50%);
-	background-image: -moz-linear-gradient(bottom, #930d0d 50%, #c21111 50%);
-	background-image: -webkit-linear-gradient(bottom, #930d0d 50%, #c21111 50%);
-	background-image: -ms-linear-gradient(bottom, #930d0d 50%, #c21111 50%);
-
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0.5, #930d0d),
-		color-stop(0.5, #c21111)
-	);
-}
-
-/**
- * You can use these classes to hide parts
- * of the countdown that you don't need.
- */
-
-.countDays{ /* display:none !important;*/ }
-.countDiv0{ /* display:none !important;*/ }
-.countHours{}
-.countDiv1{}
-.countMinutes{}
-.countDiv2{}
-.countSeconds{}
-
-.countDiv{
-	display:inline-block;
-	width:16px;
-	height:1.6em;
-	position:relative;
-}
-
-.countDiv:before,
-.countDiv:after{
-	position:absolute;
-	width:5px;
-	height:5px;
-	background-color:#444;
-	border-radius:50%;
-	left:50%;
-	margin-left:-2px;
-	top:0.5em;
-	box-shadow:1px 1px 1px rgba(4, 4, 4, 0.5);
-	content:'';
-}
-
-.countDiv:after{
-	top:0.85em;
-}
-
-/**
-.countDiv{
-	display:inline-block;
-	width:12px;
-	position:relative;
-	top:-6px;
-	margin-left:1px;
-	color: #666;
-}
-**/
-.countName{
-	font-size: 14px;
-	color: #666;
-}
-
-.timer-center{
-	margin: auto;
-    width: 330px;
-	color: #444;
 }
