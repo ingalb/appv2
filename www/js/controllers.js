@@ -44,7 +44,7 @@ angular.module('vllaznia.controllers', [])
            navigator.splashscreen.hide();
         }
 		
-		if(admob){
+		if(AdMob){
            console.log("definito");
         }
 		else{
@@ -161,7 +161,7 @@ angular.module('vllaznia.controllers', [])
         //AdMob.showBanner(8);
 		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
 		//window.admob.showInterstitial();
-		AdMob.showBannerAd(true);
+		AdMob.showBannerAd();
 		AdMob.showInterstitialAd();
 		console.log("hide loading + show banner");
       },timerhide);
@@ -215,7 +215,7 @@ angular.module('vllaznia.controllers', [])
 	    //admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);
 		//AdMob.showBanner(8);
 		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
-		admob.showBannerAd(true);
+		AdMob.showBannerAd();
         LajmeService.getAll(function(data) {
             $scope.lajme = data;
             //console.log($scope.lajme);
@@ -268,20 +268,20 @@ angular.module('vllaznia.controllers', [])
         //AdMob.showInterstitial();
 		//window.admob.cacheInterstitial();
 		//window.admob.showInterstitial();
-		admob.requestInterstitialAd();
-		admob.showInterstitialAd();
+		//admob.requestInterstitialAd();
+		AdMob.showInterstitialAd();
 		
 		$scope.showAds = function()
 		{
 			//window.admob.cacheInterstitial();
 			//window.admob.showInterstitial();
-			admob.requestInterstitialAd();
-			admob.showInterstitialAd();
+			/* admob.requestInterstitialAd();
+			admob.showInterstitialAd(); */
 			
-/* 			AdMob.prepareInterstitial({
+			AdMob.prepareInterstitial({
 				adId: admobid.interstitial,
 				autoShow: true
-			}); */
+			});
 		}
     })
 
@@ -673,16 +673,16 @@ angular.module('vllaznia.controllers', [])
 
     .controller('TvCtrl', function($scope) {
 		ga_storage._trackPageview('#/app/tv', 'Vllaznia App TV');
-/*         AdMob.prepareInterstitial({
+     AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: true
 		});
-        AdMob.showInterstitial(); */
+        AdMob.showInterstitialAd();
 		
 		//window.admob.cacheInterstitial();
 		//window.adMob.showInterstitial();
-		admob.requestInterstitialAd();
-		admob.showInterstitialAd();
+		//AdMob.requestInterstitialAd();
+		//AdMob.showInterstitialAd();
 		
         $scope.browse = function(v){
           ga_storage._trackEvent('TV', 'Play', v);
