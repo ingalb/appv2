@@ -45,14 +45,14 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		overlap: true,  // set to true, to allow banner overlap webview 
 		offsetTopBar: false,  // set to true to avoid ios7 status bar overlap 
 		isTesting: false,  // receiving test ad 
-		autoShow: true,  // auto show interstitial ad when loaded 
+		autoShow: false,  // auto show interstitial ad when loaded 
 	});
 	
 	AdMob.createBannerView();
 
 	AdMob.prepareInterstitial({
       adId: admobid.interstitial,
-      autoShow: true,
+      autoShow: false,
     });
     // Request interstitial (will present automatically when autoShowInterstitial is set to true)
     //AdMob.requestInterstitialAd();
@@ -75,6 +75,13 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     } catch (e) {
         console.log(e.message);
     }
+	
+	if(window.AdMob){
+		console.log("Okkkk jetmir");
+    }
+	else{
+		console.log("merdaaa jetmiri");
+	}
 	
     var notificationOpenedCallback = function(jsonData) {
       //alert("Notification received:\n" + JSON.stringify(jsonData));
@@ -113,10 +120,10 @@ window.plugins.OneSignal.getIds(function(ids) {
     }
 */
 
-    document.addEventListener("admob.Event.onInterstitialReceive", function() {
+    /* document.addEventListener("admob.Event.onInterstitialReceive", function() {
         console.log("The application is recieve interstial ready");
 		window.admob.showInterstitial();
-    }, false);
+    }, false); */
 
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);

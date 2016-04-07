@@ -44,7 +44,7 @@ angular.module('vllaznia.controllers', [])
            navigator.splashscreen.hide();
         }
 		
-		if(AdMob){
+		if(window.plugins.AdMob){
            console.log("definito");
         }
 		else{
@@ -161,8 +161,8 @@ angular.module('vllaznia.controllers', [])
         //AdMob.showBanner(8);
 		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
 		//window.admob.showInterstitial();
-		AdMob.showBannerAd();
-		AdMob.showInterstitialAd();
+		window.plugins.AdMob.showBannerAd();
+		//AdMob.showInterstitialAd();
 		console.log("hide loading + show banner");
       },timerhide);
 
