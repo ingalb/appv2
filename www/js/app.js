@@ -83,6 +83,13 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		console.log("merdaaa jetmiri");
 	}
 	
+	if(window.plugins.AdMob){
+		console.log("Okkkk jetmir plugins");
+    }
+	else{
+		console.log("merdaaa jetmiri plugins");
+	}
+	
     var notificationOpenedCallback = function(jsonData) {
       //alert("Notification received:\n" + JSON.stringify(jsonData));
       //console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
