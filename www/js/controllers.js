@@ -161,7 +161,7 @@ angular.module('vllaznia.controllers', [])
         //AdMob.showBanner(8);
 		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
 		//window.admob.showInterstitial();
-		window.AdMob.showBannerAd();
+		//window.AdMob.showBannerAd();
 		//AdMob.showInterstitialAd();
 		console.log("hide loading + show banner");
       },timerhide);
@@ -215,7 +215,7 @@ angular.module('vllaznia.controllers', [])
 	    //admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_CENTER);
 		//AdMob.showBanner(8);
 		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
-		AdMob.showBannerAd();
+		//AdMob.showBannerAd();
         LajmeService.getAll(function(data) {
             $scope.lajme = data;
             //console.log($scope.lajme);
@@ -269,7 +269,7 @@ angular.module('vllaznia.controllers', [])
 		//window.admob.cacheInterstitial();
 		//window.admob.showInterstitial();
 		//admob.requestInterstitialAd();
-		AdMob.showInterstitialAd();
+		//AdMob.showInterstitialAd();
 		
 		$scope.showAds = function()
 		{
@@ -278,10 +278,10 @@ angular.module('vllaznia.controllers', [])
 			/* admob.requestInterstitialAd();
 			admob.showInterstitialAd(); */
 			
-			AdMob.prepareInterstitial({
+			/* AdMob.prepareInterstitial({
 				adId: admobid.interstitial,
 				autoShow: true
-			});
+			}); */
 		}
     })
 
@@ -673,11 +673,11 @@ angular.module('vllaznia.controllers', [])
 
     .controller('TvCtrl', function($scope) {
 		ga_storage._trackPageview('#/app/tv', 'Vllaznia App TV');
-     AdMob.prepareInterstitial({
+     /* AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: true
 		});
-        AdMob.showInterstitialAd();
+        AdMob.showInterstitialAd(); */
 		
 		//window.admob.cacheInterstitial();
 		//window.adMob.showInterstitial();
