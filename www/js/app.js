@@ -5,7 +5,7 @@ var URL_APP = "http://api1.ingalb.info/";
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers', 'easypiechart', 'ngSanitize'])
+angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers', 'easypiechart', 'ngSanitize', 'admobModule'])
 //angular.module('starter', ['angular-carousel'])
 
 .run(function($ionicPlatform, $rootScope) {
@@ -20,12 +20,12 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 	    admobid = { 
           banner: 'ca-app-pub-7925487268042880/6770099564',
           interstitial: 'ca-app-pub-7925487268042880/7097196767'
-       };
+        };
 	   
 
-   /*  window.admob.initAdmob("ca-app-pub-7925487268042880/9744485565","ca-app-pub-7925487268042880/3804502366");
+    window.admob.initAdmob("ca-app-pub-7925487268042880/6770099564","ca-app-pub-7925487268042880/7097196767");
 	window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
-	window.admob.cacheInterstitial(); */
+	window.admob.cacheInterstitial();
 
 /* 	AdMob.setOptions({
       publisherId: admobid.banner,
@@ -38,7 +38,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
       autoShowInterstitial: true // auto show interstitials ad when loaded
     }); */
 	
-	AdMob.setOptions({
+/* 	AdMob.setOptions({
 		publisherId: admobid.banner,
 		interstitialAdId: admobid.interstitial,
 		bannerAtTop: false,  // set to true, to put banner at top 
@@ -46,14 +46,14 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		offsetTopBar: false,  // set to true to avoid ios7 status bar overlap 
 		isTesting: false,  // receiving test ad 
 		autoShow: false,  // auto show interstitial ad when loaded 
-	});
+	}); */
 	
-	AdMob.createBannerView();
+	//AdMob.createBannerView();
 
-	AdMob.prepareInterstitial({
+	/* AdMob.prepareInterstitial({
       adId: admobid.interstitial,
       autoShow: false,
-    });
+    }); */
     // Request interstitial (will present automatically when autoShowInterstitial is set to true)
     //AdMob.requestInterstitialAd();
 	
@@ -76,20 +76,19 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         console.log(e.message);
     }
 	
-	if(window.AdMob){
+	if(window.admob){
 		console.log("Okkkk jetmir");
     }
 	else{
 		console.log("merdaaa jetmiri");
 	}
 	
-	if(window.plugins.AdMob){
-		console.log("Okkkk jetmir plugins");
-    }
-	else{
-		console.log("merdaaa jetmiri plugins");
-	}
-	
+	window.admob.isInterstitialReady(function(isReady){
+		if(isReady){
+			console.log("admob Interstitial loaded");
+		}
+	});
+		
     var notificationOpenedCallback = function(jsonData) {
       //alert("Notification received:\n" + JSON.stringify(jsonData));
       //console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
