@@ -5,7 +5,7 @@ var URL_APP = "http://api1.ingalb.info/";
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers', 'easypiechart', 'ngSanitize', 'admobModule'])
+angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers', 'easypiechart', 'ngSanitize'])
 //angular.module('starter', ['angular-carousel'])
 
 .run(function($ionicPlatform, $rootScope) {
