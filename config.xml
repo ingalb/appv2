@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
 		    xmlns:android="http://schemas.android.com/apk/res/android"
-        id = "com.vllaznia.app1"
+        id = "com.vllaznia.app"
         versionCode = "151"
         version = "2.3">
     <name>Vllaznia App</name>
