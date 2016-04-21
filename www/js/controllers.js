@@ -349,7 +349,8 @@ angular.module('vllaznia.controllers', [])
 	   var tags = "match"+ $stateParams.ndeshjaId;
        console.log('User Tag: '+tags);
 	   var isSubscribed = function(tags){
-		  window.plugins.OneSignal.getTags(function(tag) {
+		  window.plugins.OneSignal.getTags(function(tag)
+		  {
 			if(tag[tags]=="true" && tag["match"]=="true")
 			{
 				$scope.notification = true;
@@ -367,7 +368,7 @@ angular.module('vllaznia.controllers', [])
 		console.log(tags);
 		$scope.notification = true;
 		$scope.anim = "ion-ios-bell";
-		window.plugins.OneSignal.setSubscription(true);
+ 		window.plugins.OneSignal.setSubscription(true);
 		window.plugins.OneSignal.sendTag("match",true);
 		window.plugins.OneSignal.sendTag(tags,true);
 	   }

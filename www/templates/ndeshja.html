@@ -17,7 +17,7 @@
  </ion-refresher>
  <div class="item item-text-wrap pad0 bg-transparent">
   <div class="row bg-white">
-    <div class="col col-center"><span>{{data | indexData }}<br>{{item.stadiumi.emri}}</span></div>
+    <div class="col col-center"><span>{{item.data | indexData }}<br>{{item.stadiumi.emri}}</span></div>
   </div>
   <div class="row row-top bg-white">
     <div class="col col-center Vllaznia"><img class="rank" ng-src="http://www.albaniasoccer.com/{{item.logo1}}"><br>{{item.team1}}</div>
@@ -100,9 +100,9 @@
 </ion-content>
 <ion-footer-bar class="bar-assertive col-center pad0">
    <div class="tabs tabs-icon-left tabs-assertive">
-    	<a class="tab-item" ng-click="slideTo(0)"><i class="icon ion-ios-bell"></i>Eventet</a>
-    	<a class="tab-item" ng-click="slideTo(1)"><i class="icon ion-person"></i>Formacionet</a>
-    	<a class="tab-item" ng-click="slideTo(2)"><i class="icon ion-ios-chatbubble"></i>Kronika</a>
+    	<a class="tab-item" ng-class="{active: 0 == selected}" ng-click="slideTo(0)"><i class="icon ion-ios-bell"></i>Eventet</a>
+    	<a class="tab-item" ng-class="{active: 1 == selected}" ng-click="slideTo(1)"><i class="icon ion-person"></i>Formacionet</a>
+    	<a class="tab-item" ng-class="{active: 2 == selected}" ng-click="slideTo(2)"><i class="icon ion-ios-chatbubble"></i>Kronika</a>
    </div>
 </ion-footer-bar>
 </ion-view>
