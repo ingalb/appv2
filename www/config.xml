@@ -129,6 +129,7 @@
     <access origin="fkvllaznia.net" subdomains="true"/>
     <access origin="vllaznia.cloudcontrolled.com/" subdomains="true"/>
     <access origin="googleapis.com" subdomains="true"/>
+    <access origin="google.com" subdomains="true"/>
 
 	<allow-navigation href="*" />
     <allow-intent href="http://*/*" />
