@@ -651,8 +651,14 @@ angular.module('vllaznia.controllers', [])
           //admob.showBannerAd(false);
           //admob.showInterstitialAd();
           //showInterstitialAd();
-          admob.cacheInterstitial();
-		  admob.showInterstitial();
+          //admob.cacheInterstitial();
+          //admob.showInterstitial();
+          AdMob.prepareInterstitial({
+		adId: 'ca-app-pub-7925487268042880/6932118769',
+		autoShow: true
+	  });
+		//AdMob.prepareInterstitial('ca-app-pub-7925487268042880/6932118769');
+          AdMob.showInterstitial();
           ga_storage._trackPageview('#/app/tv', 'Vllaznia App TV');
           $scope.browse = function(v) {
             ga_storage._trackEvent('TV', 'Play', v);
