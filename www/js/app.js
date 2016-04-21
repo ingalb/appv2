@@ -11,7 +11,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     try{
 
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js IOS');
+        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js IOS 1.2');
 		navigator.splashscreen.hide();
        
 	    admobid = { 
@@ -55,7 +55,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
                                    {googleProjectNumber: "455582282730"},
                                    notificationOpenedCallback);
 
-     window.plugins.OneSignal.sendTags({app: "v3", news: "true"});
+     window.plugins.OneSignal.sendTags({app: "v1.2", news: "true"});
 /*
 window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
                        {googleProjectNumber: "455582282730"},
