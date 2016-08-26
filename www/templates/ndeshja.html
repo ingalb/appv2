@@ -39,8 +39,7 @@
     <div class="col col-center Vllaznia"><img class="rank" ng-src="http://www.albaniasoccer.com/{{item.logo2}}"><br>{{item.team2}}</div>
   </div>
   <div ng-if="item.over>0" class="assertive col col-center bg-white">{{item.over_text}}</div>
-
-  <ion-slide-box show-pager="false">
+  <ion-slide-box show-pager="false" on-slide-changed="slideTo($index)">
     <ion-slide>
      <div class="item bg-transparent">
        <div id="ev0"></div>
@@ -63,12 +62,12 @@
     <ion-slide>
        <div class="item item-divider item-assertive col-center">Lojtaret</div>
        <div class="row">
-           <div class="col col-50 col-right">
+           <div class="col col-50 col-right" id="matchreport">
               <div ng-repeat="lojtaret in item.formacionet | orderObjectBy:'item.formacionet.pozicioni':reverse" ng-if="lojtaret.ekipi==item.team1" class="list">
                  <p class="eventi" id="font"><b>{{lojtaret.lojtari}}</b><br><span class="font10">{{lojtaret.pozicioni}}</span></p>
               </div>
            </div>
-           <div class="col col-50">
+           <div class="col col-50" id="matchreport">
               <div ng-repeat="lojtaret in item.formacionet | orderObjectBy:'lojtaret.pozicioni':reverse" ng-if="lojtaret.ekipi==item.team2" class="list">
                  <p class="eventi" id="font"><b>{{lojtaret.lojtari}}</b><br><span class="font10">{{lojtaret.pozicioni}}</span></p>
               </div>

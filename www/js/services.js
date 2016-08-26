@@ -28,6 +28,46 @@ angular.module('vllaznia.services', [])
 })
 
 
+	.factory('ProjectService', function($http) {
+        var SuperligaProjects = [];
+		var KupaProjects = [];
+        return {
+            getSuperligaProjects: function(callback){
+				$http.get(URL_APP+'projects.php?id=1').success(
+                    function(data) {
+						SuperligaProjects = data;
+						window.localStorage["superligaP"] = JSON.stringify(SuperligaProjects);
+						callback(SuperligaProjects);
+					}
+				)
+                .error(function(data) {
+					console.log("ERROR loading" + data);
+					if(window.localStorage["superligaP"] !== undefined) {
+                    SuperligaProjects = JSON.parse(window.localStorage["superligaP"]);
+                    callback(SuperligaProjects);
+					}
+				});
+            },
+			getKupaProjects: function(callback) {
+                $http.get(URL_APP+'projects.php?id=2').success(
+                    function(data) {
+                        KupaProjects = data;
+                        window.localStorage["kupaP"] = JSON.stringify(KupaProjects);
+                        callback(KupaProjects);
+                    }
+                )
+                .error(function(data) {
+                   console.log("ERROR:" + data);
+                   if(window.localStorage["kupaP"] !== undefined) {
+                    KupaProjects = JSON.parse(window.localStorage["kupaP"]);
+                    callback(KupaProjects);
+                }
+              });
+
+            }
+        }
+    })
+
    .factory('NdeshjetService', function($http) {
         var ndeshjet = [];
         return {
@@ -208,8 +248,15 @@ angular.module('vllaznia.services', [])
                   }
                 });
             },
-            get: function(lojtariId) {
-              return ekipi[lojtariId - 1];
+            get: function(lojtariId, callback) {
+				$http.get(URL_APP+'ekipi.php',{params:{id: 111, ekipi: 13}}).success(
+                    function(data) {
+                        ekipi1 = data;
+                        window.localStorage["ekipi1"] = JSON.stringify(data);
+                        callback(ekipi1);
+                    }
+                );
+                //return ekipi1[lojtariId - 1];
             }
         }
     })

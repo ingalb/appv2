@@ -5,7 +5,7 @@
   <ion-content class="has-header">
 
      <div class="item item-text-wrap">
-         <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged()">
+         <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
             <ion-slide>
                <div>
                     <p align="justify">Futbolli shqiptar i ka fillimet e hershme që pas pavarësisë së Shqipërisë. Në shumë qytete të vendit filloi të luhej një lojë e re sportive me emrin "futboll". Në Shkodër, Vlorë, Korçë e në disa qytete të tjera filluan të zhvilloheshin ndeshje të tilla futbolli. Në Shkodër shumë lagje të vjetra shkodrane filluan të ndesheshin ndërmjet tyre duke krijuar një interes të veçantë në popullsinë e asokohe.</p><p align="center"><img src="http://www.fkvllaznia.net/main/image/vllaznia1913.jpg" alt="Vllaznia 1913" width="480" height="330"></p> <p align="center"><strong><em>Foto e vitit 1913 mbas nje ndeshje futbolli të zhvilluar ne Shkodër</em></strong></p>
@@ -75,8 +75,8 @@
 
   <ion-footer-bar class="bar-assertive col-center pad0">
      <div class="tabs tabs-icon-left tabs-assertive">
-    	<a class="tab-item" ng-click="slideTo(0)"><i class="icon ion-ios-bookmarks"></i>Historia</a>
-    	<a class="tab-item" ng-click="slideTo(1)"><i class="icon ingalb-trofeu"></i>Trofetë</a>
+    	<a class="tab-item" ng-class="{active: 0 == selected}" ng-click="slideTo(0)"><i class="icon ion-ios-bookmarks"></i>Historia</a>
+    	<a class="tab-item" ng-class="{active: 1 == selected}" ng-click="slideTo(1)"><i class="icon ingalb-trofeu"></i>Trofetë</a>
      </div>
   </ion-footer-bar>
 </ion-view>

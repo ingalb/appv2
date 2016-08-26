@@ -1,5 +1,5 @@
-var URL_APP = "http://api1.ingalb.info/";
-
+var URL_APP_TEST = "http://api1.ingalb.info/";
+var URL_APP = "http://api.albaniasoccer.com/";
 // Ionic Starter App
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
@@ -239,6 +239,16 @@ window.plugins.OneSignal.getIds(function(ids) {
         'menuContent' :{
           templateUrl: "templates/klasifikimi.html",
           controller: 'KlasifikimiCtrl'
+        }
+      }
+    })
+	
+	.state('app.kupa', {
+      url: "/kupa",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/kupa.html",
+          controller: 'KupaCtrl'
         }
       }
     })

@@ -3,8 +3,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
 		    xmlns:android="http://schemas.android.com/apk/res/android"
         id = "com.vllaznia.app"
-        versionCode = "151"
-        version = "2.3">
+        versionCode = "152"
+        version = "2.4">
     <name>Vllaznia App</name>
 
     <description>
@@ -21,7 +21,7 @@
 
 	<content src="index.html"/>
 	
-	<preference name="phonegap-version" value="cli-6.0.0" />
+	<preference name="phonegap-version"/>
 
 	<gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />

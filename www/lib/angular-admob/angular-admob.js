@@ -1,7 +1,5 @@
 /*
  admobAngular.js
- Copyright 2014 AppFeel. All rights reserved.
- http://www.appfeel.com
  
  AdMobAds Cordova Plugin (com.admob.google)
  
@@ -87,9 +85,9 @@ if (typeof angular !== 'undefined') {
       AD_TYPE: {},
       PURCHASE_RESOLUTION: {},
       options: {},
-      setOptions: function (options) {
+	  initAdmob: function (bannerID, intertitialID) {
         return deviceready.promise.then(function () {
-          return makePromise(admob.setOptions, [options]);
+          return makePromise(admob.createBannerView, [bannerID,intertitialID]);
         });
       },
       createBannerView: function (options) {
@@ -97,9 +95,9 @@ if (typeof angular !== 'undefined') {
           return makePromise(admob.createBannerView, [options]);
         });
       },
-      showBannerAd: function (show) {
+      showBanner: function (bannerSize, position) {
         return deviceready.promise.then(function () {
-          return makePromise(admob.showBannerAd, [show]);
+          return makePromise(admob.showBanner, [bannerSize, position]);
         });
       },
       destroyBannerView: function () {
