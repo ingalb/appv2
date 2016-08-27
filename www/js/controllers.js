@@ -284,7 +284,7 @@ angular.module('vllaznia.controllers', [])
       ga_storage._trackPageview('#/app/ndeshjet', 'Vllaznia App Ndeshjet');
 
       $scope.clubId = 13;
-
+      $scope.start_val_id = 0;
       $scope.SezoneListS = [
 	    { text: "Superliga 2016-17", value: 111 },
         { text: "Superliga 2015-16", value: 105 },
@@ -296,18 +296,21 @@ angular.module('vllaznia.controllers', [])
         { text: "Superliga 2009-10", value: 10 }
        ]; 
 	   
+	  $scope.sezoni_id = $scope.SezoneListS[$scope.start_val_id].value;
+      $scope.sezoni_text = $scope.SezoneListS[$scope.start_val_id].text;
+	  
 	  ProjectService.getSuperligaProjects(function(data) {
 		  $scope.SezoneListS = data;
 	  });
 	  
-	  $scope.$on('$ionicView.enter', function(){
+	  $scope.$on('$ionicView.beforeEnter', function(){
 	    //console.log("enter view");
 		$ionicBackdrop.retain();
 		$ionicLoading.show();
 		ProjectService.getSuperligaProjects(function(data) {
 		  $scope.SezoneListS = data;
-		  $scope.sezoni_id = $scope.SezoneListS[0].value;
-          $scope.sezoni_text = $scope.SezoneListS[0].text;
+		  $scope.sezoni_id = $scope.SezoneListS[$scope.start_val_id].value;
+          $scope.sezoni_text = $scope.SezoneListS[$scope.start_val_id].text;
 		  NdeshjetService.getAllNdeshjet($scope.sezoni_id, $scope.clubId, function(data) {
             $scope.items = data;
             $ionicLoading.hide();
@@ -317,8 +320,6 @@ angular.module('vllaznia.controllers', [])
 	   });
 
       //admob.showBannerAd(true);
-      $scope.sezoni_id = $scope.SezoneListS[0].value;
-      $scope.sezoni_text = $scope.SezoneListS[0].text;
 
       $scope.loadingIndicator = $ionicLoading.show({
 	    content: 'Loading Data',
@@ -334,10 +335,11 @@ angular.module('vllaznia.controllers', [])
         $scope.popover = popover;
       });
 
-      $scope.changeSezoni = function(item) {
+      $scope.changeSezoni = function(item, index) {
+		$scope.start_val_id = index;
         $scope.sezoni_text = item.text;
         $scope.sezoni_id = item.value;
-        $scope.popover.hide();
+        //$scope.popover.hide();
 		$ionicLoading.show();
         //$scope.loadingIndicator.show;
         $ionicBackdrop.retain();
@@ -364,8 +366,9 @@ angular.module('vllaznia.controllers', [])
       ga_storage._trackPageview('#/app/ndeshjet', 'Vllaznia App Ndeshjet Kupa');
 
       $scope.clubId = 13;
-
+      $scope.start_val_id = 0;
       $scope.SezoneList = [
+	    { text: "Kupa e Shqiperise 2016-17", value: 113 },
         { text: "Kupa e Shqiperise 2015-16", value: 106 },
         { text: "Kupa e Shqiperise 2014-15", value: 104 },
         { text: "Kupa e Shqiperise 2013-14", value: 99 },
@@ -373,19 +376,22 @@ angular.module('vllaznia.controllers', [])
         { text: "Kupa e Shqiperise 2010-11", value: 13 },
         { text: "Kupa e Shqiperise 2009-10", value: 8 },
        ];
-	   
+	  
+	  $scope.sezoni_id = $scope.SezoneList[$scope.start_val_id].value;
+      $scope.sezoni_text = $scope.SezoneList[$scope.start_val_id].text;
+	  
 	  ProjectService.getKupaProjects(function(data) {
 		  $scope.SezoneList = data;
 	  });
 	  
-	 $scope.$on('$ionicView.enter', function(){
+	 $scope.$on('$ionicView.beforeEnter', function(){
 	    //console.log("enter view");
 		$ionicBackdrop.retain();
 		$ionicLoading.show();
 		ProjectService.getKupaProjects(function(data) {
 		  $scope.SezoneList = data;
-		  $scope.sezoni_id = $scope.SezoneList[0].value;
-          $scope.sezoni_text = $scope.SezoneList[0].text;
+		  $scope.sezoni_id = $scope.SezoneList[$scope.start_val_id].value;
+          $scope.sezoni_text = $scope.SezoneList[$scope.start_val_id].text;
 		  NdeshjetService.getAllNdeshjet($scope.sezoni_id, $scope.clubId, function(data) {
             $scope.items = data;
             $ionicLoading.hide();
@@ -395,8 +401,6 @@ angular.module('vllaznia.controllers', [])
 	   });
 
       //admob.showBannerAd(true);
-      $scope.sezoni_id = $scope.SezoneList[0].value;
-      $scope.sezoni_text = $scope.SezoneList[0].text;
 
       $scope.loadingIndicator = $ionicLoading.show({
 	    content: 'Loading Data',
@@ -412,10 +416,11 @@ angular.module('vllaznia.controllers', [])
         $scope.popover = popover;
       });
 
-      $scope.changeSezoni = function(item) {
+      $scope.changeSezoni = function(item, index) {
+		$scope.start_val_id = index;
         $scope.sezoni_text = item.text;
         $scope.sezoni_id = item.value;
-        $scope.popover.hide();
+        //$scope.popover.hide();
         //$scope.loadingIndicator.show;
         $ionicBackdrop.retain();
 		$ionicLoading.show();
@@ -586,6 +591,7 @@ angular.module('vllaznia.controllers', [])
     .controller('KlasifikimiCtrl', function($scope, $stateParams, $timeout, $ionicLoading, $ionicBackdrop, KlasifikimiService, ProjectService, $ionicPopover) {
      ga_storage._trackPageview('#/app/klasifikimi', 'Vllaznia App Klasifikimi');
      var titulliPop = "Zgjidh kampionatin";
+	 $scope.start_val_id = 0;
      $scope.SezoneList = [
 	   { text: "Superliga 2016-17", value: 111 },
        { text: "Superliga 2015-16", value: 105 },
@@ -597,18 +603,21 @@ angular.module('vllaznia.controllers', [])
        { text: "Superliga 2009-10", value: 10 },
       ];
 
+	  $scope.sezoni_id = $scope.SezoneList[$scope.start_val_id].value;
+      $scope.sezoni_text = $scope.SezoneList[$scope.start_val_id].text;
+	  
 	 ProjectService.getSuperligaProjects(function(data) {
 		  $scope.SezoneList = data;
 	 });
 	 
-	  $scope.$on('$ionicView.enter', function(){
-	    //console.log("enter view");
+	  $scope.$on('$ionicView.beforeEnter', function(){
+	    //console.log("enter view 12");
 		$ionicBackdrop.retain();
 		$ionicLoading.show();
 		ProjectService.getSuperligaProjects(function(data) {
 		  $scope.SezoneList = data;
-		  $scope.sezoni_id = $scope.SezoneList[0].value;
-          $scope.sezoni_text = $scope.SezoneList[0].text;
+		  $scope.sezoni_id = $scope.SezoneList[$scope.start_val_id].value;
+          $scope.sezoni_text = $scope.SezoneList[$scope.start_val_id].text;
 		  KlasifikimiService.getAllKlasifikimi($scope.sezoni_id,function(data) {
             $scope.items = data;
 			$scope.note = data[0].note;
@@ -635,8 +644,6 @@ angular.module('vllaznia.controllers', [])
 
        // $scope.sezoni = "2014-15";
        // $scope.sezoni_id = 100;
-       $scope.sezoni_id = $scope.SezoneList[0].value;
-       $scope.sezoni_text = $scope.SezoneList[0].text;
 
        KlasifikimiService.getAllKlasifikimi($scope.sezoni_id,function(data) {
             $scope.items = data;
@@ -646,10 +653,12 @@ angular.module('vllaznia.controllers', [])
             $ionicLoading.hide();
         });
 
-      $scope.changeSezoni = function(item) {
+      $scope.changeSezoni = function(item, index) {
+		$scope.start_val_id = index;
+		//console.log(index);
         $scope.sezoni_text = item.text;
         $scope.sezoni_id = item.value;
-        $scope.popover.hide();
+        //$scope.popover.hide();
         $ionicBackdrop.retain();
 		$ionicLoading.show();
         KlasifikimiService.getAllKlasifikimi($scope.sezoni_id,function(data) {
@@ -657,7 +666,7 @@ angular.module('vllaznia.controllers', [])
 			$scope.note = data[0].note;
 			$scope.legend = data[0].legend;
             //selectPopup.close();
-            //$scope.popover.hide();
+            $scope.popover.hide();
 			$ionicLoading.hide();
             $ionicBackdrop.release();
         });
