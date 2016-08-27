@@ -606,10 +606,11 @@ angular.module('vllaznia.controllers', [])
 	  $scope.sezoni_id = $scope.SezoneList[$scope.start_val_id].value;
       $scope.sezoni_text = $scope.SezoneList[$scope.start_val_id].text;
 	  
-	 /**ProjectService.getSuperligaProjects(function(data) {
+	 ProjectService.getSuperligaProjects(function(data) {
 		  $scope.SezoneList = data;
 	 });
-	 **/
+	 
+	 /**
 	  $scope.$on('$ionicView.beforeEnter', function(){
 	    //console.log("enter view 12");
 		$ionicBackdrop.retain();
@@ -627,7 +628,7 @@ angular.module('vllaznia.controllers', [])
 		  });
 	    });
 	   });
-	  
+	  **/
        $scope.loadingIndicator = $ionicLoading.show({
 	         content: 'Loading Data',
 	         animation: 'fade-in',
@@ -642,9 +643,6 @@ angular.module('vllaznia.controllers', [])
           $scope.popover = popover;
         });
 
-       // $scope.sezoni = "2014-15";
-       // $scope.sezoni_id = 100;
-
        KlasifikimiService.getAllKlasifikimi($scope.sezoni_id,function(data) {
             $scope.items = data;
 			$scope.note = data[0].note;
@@ -658,28 +656,26 @@ angular.module('vllaznia.controllers', [])
 		//console.log(index);
         $scope.sezoni_text = item.text;
         $scope.sezoni_id = item.value;
-        //$scope.popover.hide();
+        $scope.popover.hide();
         $ionicBackdrop.retain();
-		//$ionicLoading.show();
+		$ionicLoading.show();
         KlasifikimiService.getAllKlasifikimi($scope.sezoni_id,function(data) {
             $scope.items = data;
 			$scope.note = data[0].note;
 			$scope.legend = data[0].legend;
             //selectPopup.close();
             $scope.popover.hide();
-			//$ionicLoading.hide();
+			$ionicLoading.hide();
             $ionicBackdrop.release();
         });
       };
-
-
-        $timeout(function(){
-          $ionicLoading.hide();
-          //selectPopup.close();
-          $scope.popover.hide();
-          $ionicBackdrop.release();
-        },160000);
-
+       
+	  $timeout(function(){
+        $ionicLoading.hide();
+        //selectPopup.close();
+        $scope.popover.hide();
+        $ionicBackdrop.release();
+      },160000);
     })
 
     .controller('KlasifikimiDetCtrl', function($scope, $stateParams, KlasifikimiService) {
