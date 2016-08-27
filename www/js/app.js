@@ -14,7 +14,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     try{
 
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js Android v2.3');
+        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js Android v2.4');
 		navigator.splashscreen.hide();
        
 	    admobid = { 
@@ -23,11 +23,12 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         };
 	   
 
-    window.admob.initAdmob("ca-app-pub-7925487268042880/6770099564","ca-app-pub-7925487268042880/7097196767");
+   /** window.admob.initAdmob("ca-app-pub-7925487268042880/6770099564","ca-app-pub-7925487268042880/7097196767");
 	window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
 	window.admob.cacheInterstitial();
+	**/
 
-/* 	AdMob.setOptions({
+ 	AdMob.setOptions({
       publisherId: admobid.banner,
       interstitialAdId: admobid.interstitial,
       bannerAtTop: false, // set to true, to put banner at top
@@ -36,7 +37,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
       isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)
       autoShowBanner: true, // auto show banners ad when loaded
       autoShowInterstitial: true // auto show interstitials ad when loaded
-    }); */
+    });
 	
 /* 	AdMob.setOptions({
 		publisherId: admobid.banner,
@@ -58,7 +59,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     //AdMob.requestInterstitialAd();
 	
 	
-/* 	AdMob.createBanner( {
+ 	AdMob.createBanner( {
         adId: admobid.banner, 
         isTesting: false,
         overlap: false, 
@@ -69,26 +70,26 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     
     AdMob.prepareInterstitial({
         adId: admobid.interstitial,
-        autoShow: false
-    }); */
+        autoShow: true
+    });
 
     } catch (e) {
         console.log(e.message);
     }
 	
-	if(window.admob){
+	if(Admob){
 		console.log("Okkkk jetmir");
     }
 	else{
 		console.log("merdaaa jetmiri");
 	}
 	
-	window.admob.isInterstitialReady(function(isReady){
+	/**window.admob.isInterstitialReady(function(isReady){
 		if(isReady){
 			console.log("admob Interstitial loaded");
 		}
 	});
-		
+	**/	
     var notificationOpenedCallback = function(jsonData) {
       //alert("Notification received:\n" + JSON.stringify(jsonData));
       //console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
@@ -103,8 +104,9 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
                                    {googleProjectNumber: "455582282730"},
                                    notificationOpenedCallback);
 
-    window.plugins.OneSignal.sendTags({app: "v2.3", news: "true"});
+    window.plugins.OneSignal.sendTags({app: "v2.4", news: "true"});
 	window.plugins.OneSignal.setSubscription(true);
+	window.plugins.OneSignal.enableInAppAlertNotification(true);
 	
 /*
 window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
