@@ -606,10 +606,10 @@ angular.module('vllaznia.controllers', [])
 	  $scope.sezoni_id = $scope.SezoneList[$scope.start_val_id].value;
       $scope.sezoni_text = $scope.SezoneList[$scope.start_val_id].text;
 	  
-	 ProjectService.getSuperligaProjects(function(data) {
+	 /**ProjectService.getSuperligaProjects(function(data) {
 		  $scope.SezoneList = data;
 	 });
-	 
+	 **/
 	 /**
 	  $scope.$on('$ionicView.beforeEnter', function(){
 	    //console.log("enter view 12");
@@ -658,7 +658,7 @@ angular.module('vllaznia.controllers', [])
         $scope.sezoni_id = item.value;
         $scope.popover.hide();
         $ionicBackdrop.retain();
-		$ionicLoading.show();
+		//$ionicLoading.show();
         KlasifikimiService.getAllKlasifikimi($scope.sezoni_id,function(data) {
             $scope.items = data;
 			$scope.note = data[0].note;
