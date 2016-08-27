@@ -660,14 +660,14 @@ angular.module('vllaznia.controllers', [])
         $scope.sezoni_id = item.value;
         //$scope.popover.hide();
         $ionicBackdrop.retain();
-		$ionicLoading.show();
+		//$ionicLoading.show();
         KlasifikimiService.getAllKlasifikimi($scope.sezoni_id,function(data) {
             $scope.items = data;
 			$scope.note = data[0].note;
 			$scope.legend = data[0].legend;
             //selectPopup.close();
             $scope.popover.hide();
-			$ionicLoading.hide();
+			//$ionicLoading.hide();
             $ionicBackdrop.release();
         });
       };
@@ -678,7 +678,7 @@ angular.module('vllaznia.controllers', [])
           //selectPopup.close();
           $scope.popover.hide();
           $ionicBackdrop.release();
-        },6000);
+        },160000);
 
     })
 
