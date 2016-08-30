@@ -36,7 +36,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
       offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
       isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)
       autoShowBanner: true, // auto show banners ad when loaded
-      autoShowInterstitial: true // auto show interstitials ad when loaded
+      autoShowInterstitial: false // auto show interstitials ad when loaded
     });
 	
 /* 	AdMob.setOptions({
@@ -65,12 +65,12 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         overlap: false, 
         offsetTopBar: false, 
         position: AdMob.AD_POSITION.BOTTOM_CENTER,
-        bgColor: 'black'
+        bgColor: 'red'
     } );
     
     AdMob.prepareInterstitial({
         adId: admobid.interstitial,
-        autoShow: true
+        autoShow: false
     });
 
     } catch (e) {
@@ -78,10 +78,10 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     }
 	
 	if(Admob){
-		console.log("Okkkk jetmir");
+		console.log("Okkkk Jetmir");
     }
 	else{
-		console.log("merdaaa jetmiri");
+		console.log("aia Jetmiri");
 	}
 	
 	/**window.admob.isInterstitialReady(function(isReady){

@@ -154,10 +154,23 @@ angular.module('vllaznia.controllers', [])
 				//console.log("new data");
 				//$scope.items = data;
 				$scope.items = data.slice(0,2);
+				displayInterstial();
 				});
 			}();
 		});
 
+	    var displayInterstial = function(){
+		  
+			var deviceName = device.name;
+			var pattern0 = /(S4|S5|S6)/;
+			//returns true or false...
+			var exists0 = pattern0.test(deviceName);
+			if(!exists0)
+			{
+				AdMob.showInterstitial(); 
+			}		 
+		};
+	  
       $timeout(function(){
         $ionicLoading.hide();
         //AdMob.showBanner(8);
@@ -267,8 +280,23 @@ angular.module('vllaznia.controllers', [])
 		
 		AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-7925487268042880/6932118769',
-			autoShow: true
+			autoShow: false
 		});
+		displayInterstial();
+		
+		var displayInterstial = function(){  
+			var deviceName = device.name;
+			var pattern0 = /(S4|S5|S6)/;
+			//returns true or false...
+			var exists0 = pattern0.test(deviceName);
+			console.log(deviceName);
+			if(!exists0)
+			{
+				AdMob.showInterstitial();
+                console.log("show interstial");				
+			}		 
+		};
+		
 		//AdMob.prepareInterstitial('ca-app-pub-7925487268042880/6932118769');
         //AdMob.showInterstitial();
 		//window.admob.cacheInterstitial();
