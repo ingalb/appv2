@@ -282,8 +282,11 @@ angular.module('vllaznia.controllers', [])
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: false
 		});
-		displayInterstial();
 		
+		$scope.$on('$ionicView.enter', function(){
+			displayInterstial();
+        });
+				
 		var displayInterstial = function(){  
 			var deviceName = device.name;
 			var pattern0 = /(S4|S5|S6)/;
