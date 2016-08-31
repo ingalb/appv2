@@ -217,7 +217,7 @@ body{
 #rank > .small-klasifikimi{
     white-space: normal;
 }
-#ndeshjet > .col{
+.matches > .col{
 	padding: 5px 0px 5px 0px;
 }
 
