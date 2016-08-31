@@ -133,7 +133,7 @@ body{
     background-size: cover;
     position: relative;
 }
-/**
+
 .scroll-content {
     background-attachment: scroll;
     background-clip: border-box;
@@ -143,9 +143,9 @@ body{
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-} **/
+}
 
-.scroll-content:before{
+/* .scroll-content:before{
   content: "";
   position: fixed;
   left: 0;
@@ -167,7 +167,7 @@ body{
   -o-filter: blur(3px);
   -ms-filter: blur(3px);
   filter: blur(3px);
-}
+} */
 
 .slider-img {
   height: 180px;
@@ -217,6 +217,10 @@ body{
 #rank > .small-klasifikimi{
     white-space: normal;
 }
+#ndeshjet > .col{
+	padding: 5px 0px 5px 0px;
+}
+
 .rank-12, .rank-11, .rank-10, .rank-9 {background-color:#cc3333; color:#FFF;}
 .rank-1{background-color:#0099cc; color:#FFF;}
 .rank-2, .rank-3{background-color:#ff9900; color:#FFF;}
@@ -439,6 +443,19 @@ font-size:24px;
    padding-left: 30px;
 }
 .scroll-refresher{height:50px;}
+
+.popover {
+    height: auto !important;
+}
+.popover ion-header-bar {
+    position: relative;
+}
+.popover ion-content {
+    top: 0;
+    position: relative;
+}
+
+
 .slideDown{
 	animation-name: slideDown;
 	-webkit-animation-name: slideDown;

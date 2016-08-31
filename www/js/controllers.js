@@ -31,6 +31,16 @@ angular.module('vllaznia.controllers', [])
        return _date;
      };
     })
+	
+    .filter('matchData1', function($filter){
+     return function(input)
+     {
+       if(input == null){ return ""; }
+       var value = input.split("+");
+       var _date = $filter('date')(new Date(value[0]),'dd MMM');
+       return _date;
+     };
+    })
 
   .filter('orderObjectBy', function() {
    return function(items, field, reverse) {
@@ -48,8 +58,8 @@ angular.module('vllaznia.controllers', [])
 
     .controller('IndexCtrl', function($scope, $ionicSlideBoxDelegate, $state, $timeout, $ionicLoading, $ionicPopup, LajmeService, $ionicModal, $rootScope, NdeshjetService) {
         var tani = new Date();
-        var timerhide = 10000;
-        ga_storage._trackPageview('#/app/index', 'Vllaznia App Index');
+        var timerhide = 5000;
+        ga_storage._trackPageview('#/app/index', 'Vllaznia App Index v2.4');
         if(navigator.splashscreen){
            navigator.splashscreen.hide();
         }
@@ -76,7 +86,7 @@ angular.module('vllaznia.controllers', [])
          $scope.modal.show();
        }); */
 	   
-	   var notifica = $rootScope.$on('pushEvent', function(event,message){
+	    var notifica = $rootScope.$on('pushEvent', function(event,message){
          console.log(JSON.stringify(message));
          $scope.titulli=message.additionalData.title;
          $scope.teksti=message.message;
@@ -160,15 +170,19 @@ angular.module('vllaznia.controllers', [])
 		});
 
 	    var displayInterstial = function(){
-			var deviceName = device.name;
+			var deviceName = device.model;
 			console.log(deviceName);
-			var pattern0 = /(S4|S5|S6)/;
+			var pattern0 = /(I9508|Nexus 5|nexus 5|G920|G925)/;
 			//returns true or false...
 			var exists0 = pattern0.test(deviceName);
 			if(!exists0)
 			{
-				AdMob.showInterstitial(); 
-			}		 
+				ga_storage._trackEvent('Admob', 'Show', deviceName);
+				AdMob.showInterstitial();				
+			}
+            else{
+	            ga_storage._trackEvent('Admob', 'Dontshow', deviceName);
+            }			
 		};
 	  
       $timeout(function(){
@@ -279,26 +293,30 @@ angular.module('vllaznia.controllers', [])
 		//console.log($scope.lajmi);
         $ionicLoading.hide();
 		
-		AdMob.prepareInterstitial({
+		/* AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: false
-		});
+		}); */
 		
 		$scope.$on('$ionicView.enter', function(){
 			displayInterstial();
         });
 				
 		var displayInterstial = function(){  
-			var deviceName = device.name;
-			var pattern0 = /(S4|S5|S6)/;
+			var deviceName = device.model;
+			var pattern0 = /(GT-I9508|Nexus 5|SM-G920|SM-G925)/;
 			//returns true or false...
 			var exists0 = pattern0.test(deviceName);
 			console.log(deviceName);
 			if(!exists0)
 			{
+                console.log("show interstial");	
+                ga_storage._trackEvent('Admob', 'Show', deviceName);				
+			}
+            else{
+	            ga_storage._trackEvent('Admob', 'Dontshow', deviceName);
 				AdMob.showInterstitial();
-                console.log("show interstial");				
-			}		 
+            }			
 		};
 		
 		//AdMob.prepareInterstitial('ca-app-pub-7925487268042880/6932118769');

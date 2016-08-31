@@ -14,13 +14,20 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     try{
 
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/appJS', 'Vllaznia App Js Android v2.4');
+        ga_storage._trackPageview('#/app/appJS24', 'Vllaznia App Js Android v2.4');
 		navigator.splashscreen.hide();
        
+	    //Android
 	    admobid = { 
           banner: 'ca-app-pub-7925487268042880/6770099564',
           interstitial: 'ca-app-pub-7925487268042880/7097196767'
         };
+		
+		//IOS
+		/* admobid = { 
+          banner: 'ca-app-pub-7925487268042880/5455385567',
+          interstitial: 'ca-app-pub-7925487268042880/6932118769'
+        }; */
 	   
 
    /** window.admob.initAdmob("ca-app-pub-7925487268042880/6770099564","ca-app-pub-7925487268042880/7097196767");
@@ -76,13 +83,6 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     } catch (e) {
         console.log(e.message);
     }
-	
-	if(Admob){
-		console.log("Okkkk Jetmir");
-    }
-	else{
-		console.log("aia Jetmiri");
-	}
 	
 	/**window.admob.isInterstitialReady(function(isReady){
 		if(isReady){
