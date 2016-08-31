@@ -924,7 +924,7 @@ angular.module('vllaznia.controllers', [])
 		
         $scope.browse = function(v){
           ga_storage._trackEvent('TV', 'Play', v);
-            window.open(v, "_system", "location=yes");
+            window.open(v, "_blank", "location=no");
         }
     })
 
@@ -943,7 +943,7 @@ angular.module('vllaznia.controllers', [])
         });
         $scope.browse = function(v) {
           ga_storage._trackEvent('Forumi', 'Read', v);
-          window.open(v, "_system", "location=yes");
+          cordova.InAppBrowser.open(v, "_blank", "location=no");
         }
         $timeout(function(){
           $ionicLoading.hide();
