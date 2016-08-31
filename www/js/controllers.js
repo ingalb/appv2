@@ -277,7 +277,6 @@ angular.module('vllaznia.controllers', [])
     })
 
     .controller('LajmeDetCtrl', function($scope, $sce, $stateParams, $ionicLoading, LajmeService) {
-        ga_storage._trackPageview('#/app/lajmi/'+ $stateParams.lajmiId+'', 'Vllaznia App Lajme Det');
         $scope.shareL = function(message, subject, image, link){
           ga_storage._trackEvent('Lajme', 'Share', subject);
           window.plugins.socialsharing.share(message, subject, image, link, this.onSuccess, this.onError);
@@ -290,6 +289,7 @@ angular.module('vllaznia.controllers', [])
 			showDelay: 100
 	    });
         $scope.lajmi = LajmeService.getId($stateParams.lajmiId);
+		ga_storage._trackPageview('#/app/lajmi/'+ $scope.lajmi.id+'', $scope.lajmi.title);
 		//console.log($scope.lajmi);
         $ionicLoading.hide();
 		
@@ -311,11 +311,11 @@ angular.module('vllaznia.controllers', [])
 			if(!exists0)
 			{
                 console.log("show interstial");	
-                ga_storage._trackEvent('Admob', 'Show', deviceName);				
+                ga_storage._trackEvent('Admob', 'Show', deviceName);
+                AdMob.showInterstitial();				
 			}
             else{
-	            ga_storage._trackEvent('Admob', 'Dontshow', deviceName);
-				AdMob.showInterstitial();
+	            ga_storage._trackEvent('Admob', 'Dontshow', deviceName);				
             }			
 		};
 		
@@ -363,7 +363,7 @@ angular.module('vllaznia.controllers', [])
 		  $scope.SezoneListS = data;
 	  });
 	  **/
-	  $scope.$on('$ionicView.beforeEnter', function(){
+	  $scope.$on('$ionicView.Enter', function(){
 	    //console.log("enter view");
 		$ionicBackdrop.retain();
 		$ionicLoading.show();
@@ -411,7 +411,7 @@ angular.module('vllaznia.controllers', [])
 		$scope.start_val_id = index;
         $scope.sezoni_text = item.text;
         $scope.sezoni_id = item.value;
-        //$scope.popover.hide();
+        $scope.popover.hide();
 		$ionicLoading.show();
         //$scope.loadingIndicator.show;
         $ionicBackdrop.retain();
@@ -507,7 +507,7 @@ angular.module('vllaznia.controllers', [])
 		$scope.start_val_id = index;
         $scope.sezoni_text = item.text;
         $scope.sezoni_id = item.value;
-        //$scope.popover.hide();
+        $scope.popover.hide();
         //$scope.loadingIndicator.show;
         $ionicBackdrop.retain();
 		$ionicLoading.show();
@@ -540,7 +540,6 @@ angular.module('vllaznia.controllers', [])
 	  
 	  
      .controller('NdeshjetDetCtrl', function($scope, $sce, $stateParams, $timeout, $ionicNavBarDelegate, $ionicScrollDelegate, $ionicSlideBoxDelegate, $ionicLoading, NdeshjaService) {
-       ga_storage._trackPageview('#/app/ndeshja/'+ $stateParams.ndeshjaId+'', 'Vllaznia App Ndeshja Det');
        var tani = new Date();
        var time = 1;
        var d1, minuti, percenti;
@@ -553,7 +552,7 @@ angular.module('vllaznia.controllers', [])
 	   var tags = "match"+ $stateParams.ndeshjaId;
        console.log('User Tag: '+tags);
 	   var isSubscribed = function(tags){
-		  window.plugins.OneSignal.getTags(function(tag)
+		  /* window.plugins.OneSignal.getTags(function(tag)
 		  {
 			if(tag[tags]=="true" && tag["match"]=="true")
 			{
@@ -564,7 +563,7 @@ angular.module('vllaznia.controllers', [])
 				$scope.notification = false;
 				$scope.anim = "ion-ios-bell-outline";
 			}
-		  });
+		  }); */
 	    }
 	   isSubscribed(tags);
 	   var subscribe = function(tags){
@@ -621,19 +620,20 @@ angular.module('vllaznia.controllers', [])
 				isSubscribed(tags);
 				if(counter%2)
 				{
-					//console.log("show");
-					AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+					AdMob.hideBanner();
+					//console.log("hide");					
 				}
 			    else
 				{
-					AdMob.hideBanner();
-					//console.log("hide");
+					//console.log("show");
+					AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 				}
 				
 				NdeshjaService.getReport($stateParams.ndeshjaId, function(data) {
 					$scope.item = data;
 					$scope.content = data.kronika;
 					$scope.percent = data.percent;
+					ga_storage._trackPageview('#/app/ndeshja/'+ $stateParams.ndeshjaId+'', $scope.item.team1+' - '+$scope.item.team2 );
 					$ionicNavBarDelegate.title(data.java);
 					$ionicSlideBoxDelegate.update();
 					$ionicScrollDelegate.resize();
@@ -722,7 +722,7 @@ angular.module('vllaznia.controllers', [])
 	 });
 	 **/
 	 
-	  $scope.$on('$ionicView.beforeEnter', function(){
+	  $scope.$on('$ionicView.Enter', function(){
 	    //console.log("enter view 12");
 		$ionicBackdrop.retain();
 		$ionicLoading.show();
@@ -769,7 +769,7 @@ angular.module('vllaznia.controllers', [])
         $scope.sezoni_id = item.value;
         $scope.popover.hide();
         $ionicBackdrop.retain();
-		//$ionicLoading.show();
+		$ionicLoading.show();
         KlasifikimiService.getAllKlasifikimi($scope.sezoni_id,function(data) {
             $scope.items = data;
 			$scope.note = data[0].note;
