@@ -172,7 +172,7 @@ angular.module('vllaznia.controllers', [])
 	    var displayInterstial = function(){
 			var deviceName = device.model;
 			console.log(deviceName);
-			var pattern0 = /(I9508|Nexus 5|nexus 5|G920|G925)/;
+			var pattern0 = /(GT-I9508|Nexus 5|nexus 5|SM-G920|SM-G925|SM-G93|SM-G90|GT-I95)/;
 			//returns true or false...
 			var exists0 = pattern0.test(deviceName);
 			if(!exists0)
@@ -293,10 +293,10 @@ angular.module('vllaznia.controllers', [])
 		//console.log($scope.lajmi);
         $ionicLoading.hide();
 		
-		/* AdMob.prepareInterstitial({
+		AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: false
-		}); */
+		});
 		
 		$scope.$on('$ionicView.enter', function(){
 			displayInterstial();
@@ -304,18 +304,18 @@ angular.module('vllaznia.controllers', [])
 				
 		var displayInterstial = function(){  
 			var deviceName = device.model;
-			var pattern0 = /(GT-I9508|Nexus 5|SM-G920|SM-G925)/;
+			var pattern0 = /(GT-I9508|Nexus 5|nexus 5|SM-G920|SM-G925|SM-G93|SM-G90|GT-I95)/;
 			//returns true or false...
 			var exists0 = pattern0.test(deviceName);
 			console.log(deviceName);
 			if(!exists0)
 			{
                 console.log("show interstial");	
-                ga_storage._trackEvent('Admob', 'Show', deviceName);
+                ga_storage._trackEvent('AdmobL', 'ShowL', deviceName);
                 AdMob.showInterstitial();				
 			}
             else{
-	            ga_storage._trackEvent('Admob', 'Dontshow', deviceName);				
+	            ga_storage._trackEvent('AdmobL', 'DontshowL', deviceName);				
             }			
 		};
 		
@@ -552,7 +552,7 @@ angular.module('vllaznia.controllers', [])
 	   var tags = "match"+ $stateParams.ndeshjaId;
        console.log('User Tag: '+tags);
 	   var isSubscribed = function(tags){
-		  /* window.plugins.OneSignal.getTags(function(tag)
+		  window.plugins.OneSignal.getTags(function(tag)
 		  {
 			if(tag[tags]=="true" && tag["match"]=="true")
 			{
@@ -563,7 +563,7 @@ angular.module('vllaznia.controllers', [])
 				$scope.notification = false;
 				$scope.anim = "ion-ios-bell-outline";
 			}
-		  }); */
+		  });
 	    }
 	   isSubscribed(tags);
 	   var subscribe = function(tags){

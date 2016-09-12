@@ -302,11 +302,18 @@ body{
 	margin:0;
         font-size:12px;
 }
-.Gol, .Penallti{
+.Gol{
    background:url("../img/goal.png") no-repeat;
    padding-left:22px;
    padding-bottom:10px;
    padding-top:3px;
+   margin-left:2px;
+}
+.Penallti{
+   background:url("../img/penallti1.png") no-repeat;
+   padding-left:24px;
+   padding-bottom:10px;
+   padding-top:2px;
    margin-left:2px;
 }
 .Autogol{
@@ -318,6 +325,10 @@ body{
 }
 .humbur{
    background:url("../img/phumbur.png") no-repeat;
+   padding-left:22px;
+   padding-bottom:10px;
+   padding-top:3px;
+   margin-left:2px;
 }
 .verdhe{
    background:url("../img/karton-verdhe.png") no-repeat;
@@ -443,7 +454,11 @@ font-size:24px;
    padding-left: 30px;
 }
 .scroll-refresher{height:50px;}
+#kupa {
+	min-width:  254px;
+}
 
+/**
 .popover {
     height: auto !important;
 	width:  auto !important;
@@ -455,7 +470,7 @@ font-size:24px;
     top: 0;
     position: relative;
 }
-
+**/
 
 .slideDown{
 	animation-name: slideDown;
