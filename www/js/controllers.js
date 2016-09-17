@@ -163,7 +163,7 @@ angular.module('vllaznia.controllers', [])
 				NdeshjetService.getSuperligaLastNdeshje(function(data) {
 				//console.log("new data");
 				//$scope.items = data;
-				$scope.items = data.slice(0,2);
+				$scope.items = data.slice(0,3);
 				//displayInterstial();
 				});
 			}();
