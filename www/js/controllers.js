@@ -178,7 +178,11 @@ angular.module('vllaznia.controllers', [])
 			if(!exists0)
 			{
 				ga_storage._trackEvent('Admob', 'Show', deviceName);
-				AdMob.showInterstitial();				
+				//AdMob.showInterstitial();
+				window.plugins.AdMob.showInterstitialAd(true, 
+          			function(){},
+          			function(e){console.log(JSON.stringify(e));}
+        			);
 			}
             else{
 	            ga_storage._trackEvent('Admob', 'Dontshow', deviceName);
@@ -293,10 +297,12 @@ angular.module('vllaznia.controllers', [])
 		//console.log($scope.lajmi);
         $ionicLoading.hide();
 		
-		AdMob.prepareInterstitial({
+	/**	AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: false
 		});
+	**/
+		window.plugins.AdMob.createInterstitialView();
 		
 		$scope.$on('$ionicView.enter', function(){
 			displayInterstial();
@@ -312,7 +318,10 @@ angular.module('vllaznia.controllers', [])
 			{
                 console.log("show interstial");	
                 ga_storage._trackEvent('AdmobL', 'ShowL', deviceName);
-                AdMob.showInterstitial();				
+                window.plugins.AdMob.showInterstitialAd(true, 
+          			function(){},
+          			function(e){console.log(JSON.stringify(e));}
+        			);				
 			}
             else{
 	            ga_storage._trackEvent('AdmobL', 'DontshowL', deviceName);				
