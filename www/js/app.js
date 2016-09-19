@@ -14,7 +14,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     try{
 
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/appJS24', 'Vllaznia App Js Android v2.4');
+        ga_storage._trackPageview('#/app/appJS24', 'Vllaznia App Js Android v2.4.1');
 		navigator.splashscreen.hide();
 		
 		window.open = cordova.InAppBrowser.open;
@@ -67,7 +67,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     // Request interstitial (will present automatically when autoShowInterstitial is set to true)
     //AdMob.requestInterstitialAd();
 	
-	
+/**	
  	AdMob.createBanner( {
         adId: admobid.banner, 
         isTesting: false,
@@ -81,6 +81,13 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         adId: admobid.interstitial,
         autoShow: false
     });
+**/
+/** New Admob Test **/
+   window.plugins.AdMob.createBannerView();
+   // create interstitial ad
+   window.plugins.AdMob.createInterstitialView();
+
+
 
     } catch (e) {
         console.log(e.message);
