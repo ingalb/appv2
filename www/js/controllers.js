@@ -313,7 +313,9 @@ angular.module('vllaznia.controllers', [])
 			if(!exists0)
 			{
                 console.log("show interstial");	
+                window.plugins.AdMob.showInterstitialAd(true);
                 ga_storage._trackEvent('AdmobL', 'ShowL', deviceName);
+
 			}
             else{
 	            ga_storage._trackEvent('AdmobL', 'DontshowL', deviceName);				
@@ -607,8 +609,8 @@ angular.module('vllaznia.controllers', [])
 		$scope.$on('$ionicView.beforeLeave', function(){
          $timeout.cancel(timer);
 		 console.log("leave view");
-		 //AdMob.showAd();
-		 AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+		 window.plugins.AdMob.showAd(true);
+		 //AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 		 //console.log("show");
 		});
 		
@@ -622,15 +624,15 @@ angular.module('vllaznia.controllers', [])
 				isSubscribed(tags);
 				if(counter%2)
 				{
-					//window.plugins.AdMob.showAd(false);
-					//console.log("hide");
-					AdMob.hideBanner();
+					window.plugins.AdMob.showAd(false);
+					console.log("hide");
+					//AdMob.hideBanner();
 				}
 			    else
 				{
-					//console.log("show");
-					//window.plugins.AdMob.showAd(true);
-					AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+					console.log("show");
+					window.plugins.AdMob.showAd(true);
+					//AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 				}
 				
 				NdeshjaService.getReport($stateParams.ndeshjaId, function(data) {
