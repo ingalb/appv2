@@ -615,7 +615,7 @@ angular.module('vllaznia.controllers', [])
 		$scope.$on('$ionicView.beforeLeave', function(){
          $timeout.cancel(timer);
 		 console.log("leave view");
-		 AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+		 window.plugins.AdMob.showAd();
 		 //console.log("show");
 		});
 		
@@ -629,13 +629,13 @@ angular.module('vllaznia.controllers', [])
 				isSubscribed(tags);
 				if(counter%2)
 				{
-					AdMob.hideBanner();
+					window.plugins.AdMob.showAd(false);
 					//console.log("hide");					
 				}
 			    else
 				{
 					//console.log("show");
-					AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+					window.plugins.AdMob.showAd(true);
 				}
 				
 				NdeshjaService.getReport($stateParams.ndeshjaId, function(data) {
