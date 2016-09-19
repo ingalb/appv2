@@ -179,10 +179,6 @@ angular.module('vllaznia.controllers', [])
 			{
 				ga_storage._trackEvent('Admob', 'Show', deviceName);
 				//AdMob.showInterstitial();
-				window.plugins.AdMob.showInterstitialAd(true, 
-          			function(){},
-          			function(e){console.log(JSON.stringify(e));}
-        			);
 			}
             else{
 	            ga_storage._trackEvent('Admob', 'Dontshow', deviceName);
@@ -318,10 +314,6 @@ angular.module('vllaznia.controllers', [])
 			{
                 console.log("show interstial");	
                 ga_storage._trackEvent('AdmobL', 'ShowL', deviceName);
-                window.plugins.AdMob.showInterstitialAd(true, 
-          			function(){},
-          			function(e){console.log(JSON.stringify(e));}
-        			);				
 			}
             else{
 	            ga_storage._trackEvent('AdmobL', 'DontshowL', deviceName);				
@@ -615,7 +607,8 @@ angular.module('vllaznia.controllers', [])
 		$scope.$on('$ionicView.beforeLeave', function(){
          $timeout.cancel(timer);
 		 console.log("leave view");
-		 window.plugins.AdMob.showAd();
+		 //AdMob.showAd();
+		 AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 		 //console.log("show");
 		});
 		
@@ -629,13 +622,15 @@ angular.module('vllaznia.controllers', [])
 				isSubscribed(tags);
 				if(counter%2)
 				{
-					window.plugins.AdMob.showAd(false);
-					//console.log("hide");					
+					//window.plugins.AdMob.showAd(false);
+					//console.log("hide");
+					AdMob.hideBanner();
 				}
 			    else
 				{
 					//console.log("show");
-					window.plugins.AdMob.showAd(true);
+					//window.plugins.AdMob.showAd(true);
+					AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 				}
 				
 				NdeshjaService.getReport($stateParams.ndeshjaId, function(data) {
