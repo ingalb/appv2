@@ -31,22 +31,26 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
           banner: 'ca-app-pub-7925487268042880/5455385567',
           interstitial: 'ca-app-pub-7925487268042880/6932118769'
         }; */
-	   
+	
+    AdMob.setOptions({
+       publisherId: admobid.banner,
+       interstitialAdId: admobid.interstitial,
+       bannerAtTop: false, // set to true, to put banner at top
+       overlap: false, // set to true, to allow banner overlap webview
+       offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
+       isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)
+       autoShowBanner: true, // auto show banners ad when loaded
+       autoShowInterstitial: false // auto show interstitials ad when loaded
+     });  
+     
+     console.log(AdMob.setOptions);
 
    /** window.admob.initAdmob("ca-app-pub-7925487268042880/6770099564","ca-app-pub-7925487268042880/7097196767");
 	window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
 	window.admob.cacheInterstitial();
 	**/
 
-        window.plugins.AdMob.setOptions( {
-          publisherId: admobid.banner,
-          interstitialAdId: admobid.interstitial,
-          bannerAtTop: false, // set to true, to put banner at top
-          overlap: false, // set to true, to allow banner overlap webview
-          offsetTopBar: false, // set to true to avoid ios7 status bar overlap
-          isTesting: false, // receiving test ad
-          autoShow: false // auto show interstitial ad when loaded
-        });
+       
 	
 /* 	AdMob.setOptions({
 		publisherId: admobid.banner,
@@ -67,7 +71,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     // Request interstitial (will present automatically when autoShowInterstitial is set to true)
     //AdMob.requestInterstitialAd();
 	
-/**	
+	
  	AdMob.createBanner( {
         adId: admobid.banner, 
         isTesting: false,
@@ -81,12 +85,6 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         adId: admobid.interstitial,
         autoShow: false
     });
-**/
-/** New Admob Test **/
-   window.plugins.AdMob.createBannerView();
-   // create interstitial ad
-   window.plugins.AdMob.createInterstitialView();
-
 
 
     } catch (e) {
