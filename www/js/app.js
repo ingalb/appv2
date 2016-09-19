@@ -31,7 +31,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
           banner: 'ca-app-pub-7925487268042880/5455385567',
           interstitial: 'ca-app-pub-7925487268042880/6932118769'
         }; */
-	
+/**	
     AdMob.setOptions({
        publisherId: admobid.banner,
        interstitialAdId: admobid.interstitial,
@@ -42,8 +42,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
        autoShowBanner: true, // auto show banners ad when loaded
        autoShowInterstitial: false // auto show interstitials ad when loaded
      });  
-     
-     console.log(AdMob.setOptions);
+     **/
+     //console.log(AdMob.setOptions);
 
    /** window.admob.initAdmob("ca-app-pub-7925487268042880/6770099564","ca-app-pub-7925487268042880/7097196767");
 	window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
@@ -52,7 +52,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 
        
 	
-/* 	AdMob.setOptions({
+ 	window.plugins.AdMob.setOptions({
 		publisherId: admobid.banner,
 		interstitialAdId: admobid.interstitial,
 		bannerAtTop: false,  // set to true, to put banner at top 
@@ -60,7 +60,11 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		offsetTopBar: false,  // set to true to avoid ios7 status bar overlap 
 		isTesting: false,  // receiving test ad 
 		autoShow: false,  // auto show interstitial ad when loaded 
-	}); */
+	}); 
+	
+	window.plugins.AdMob.createBannerView();
+        // create interstitial ad
+        window.plugins.AdMob.createInterstitialView();
 	
 	//AdMob.createBannerView();
 
@@ -71,7 +75,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     // Request interstitial (will present automatically when autoShowInterstitial is set to true)
     //AdMob.requestInterstitialAd();
 	
-	
+/**	
  	AdMob.createBanner( {
         adId: admobid.banner, 
         isTesting: false,
@@ -85,7 +89,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         adId: admobid.interstitial,
         autoShow: false
     });
-
+**/
 
     } catch (e) {
         console.log(e.message);
