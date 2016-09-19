@@ -18,6 +18,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		navigator.splashscreen.hide();
 		
 		window.open = cordova.InAppBrowser.open;
+		//AdMob = window.plugins.AdMob;
        
 	    //Android
 	    admobid = { 
@@ -37,16 +38,15 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 	window.admob.cacheInterstitial();
 	**/
 
- 	AdMob.setOptions({
-      publisherId: admobid.banner,
-      interstitialAdId: admobid.interstitial,
-      bannerAtTop: false, // set to true, to put banner at top
-      overlap: false, // set to true, to allow banner overlap webview
-      offsetStatusBar: true, // set to true to avoid ios7 status bar overlap
-      isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)
-      autoShowBanner: true, // auto show banners ad when loaded
-      autoShowInterstitial: false // auto show interstitials ad when loaded
-    });
+        window.plugins.AdMob.setOptions( {
+          publisherId: admobid.banner,
+          interstitialAdId: admobid.interstitial,
+          bannerAtTop: false, // set to true, to put banner at top
+          overlap: false, // set to true, to allow banner overlap webview
+          offsetTopBar: false, // set to true to avoid ios7 status bar overlap
+          isTesting: false, // receiving test ad
+          autoShow: false // auto show interstitial ad when loaded
+        });
 	
 /* 	AdMob.setOptions({
 		publisherId: admobid.banner,
