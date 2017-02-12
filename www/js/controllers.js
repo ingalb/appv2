@@ -883,11 +883,12 @@ angular.module('vllaznia.controllers', [])
 
     .controller('TvCtrl', function($scope) {
 		ga_storage._trackPageview('#/app/tv', 'Vllaznia App TV');
-      AdMob.prepareInterstitial({
+                AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: true
 		});
-        AdMob.showInterstitialAd();
+                AdMob.showInterstitial();
+	
 		
 		//window.admob.cacheInterstitial();
 		//window.adMob.showInterstitial();
@@ -896,7 +897,7 @@ angular.module('vllaznia.controllers', [])
 		
         $scope.browse = function(v){
           ga_storage._trackEvent('TV', 'Play', v);
-            window.open(v, "_blank", "location=no");
+            window.open(v, "_blank", "location=yes");
         }
     })
 
