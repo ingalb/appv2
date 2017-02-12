@@ -88,8 +88,8 @@ angular.module('vllaznia.controllers', [])
 	   
 	    var notifica = $rootScope.$on('pushEvent', function(event,message){
          console.log(JSON.stringify(message));
-         $scope.titulli=message.additionalData.title;
-         $scope.teksti=message.message;
+         $scope.titulli=message.title;
+         $scope.teksti=message.body;
          //$scope.dati = JSON.stringify(message);
 		 //$scope.teksti=message.additionalData;
 		 //console.log(JSON.stringify(message.additionalData));
