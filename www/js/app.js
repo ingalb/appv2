@@ -90,7 +90,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
       //alert("Notification received:\n" + JSON.stringify(jsonData));
       //console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
       // firing an event downwards
-      $rootScope.$broadcast('pushEvent', jsonData);
+      $rootScope.$broadcast('pushEvent', jsonData.notification.payload);
     };
 		
     //window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
