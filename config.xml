@@ -57,9 +57,11 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
-	<preference name="AutoHideSplashScreen" value="true" />
+    <preference name="AutoHideSplashScreen" value="true" />
     <!--	<preference name="splash-screen-duration" value="500000" />-->
-	  <preference name="SplashScreenDelay" value="1000"/>
+    <preference name="SplashScreenDelay" value="1000"/>
+    <preference name="FadeSplashScreen" value="false"/>
+
 
 
     <icon src="icon.png" />
