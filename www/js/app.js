@@ -72,7 +72,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     
     AdMob.prepareInterstitial({
         adId: admobid.interstitial,
-        autoShow: true
+        autoShow: false
     });
 
 
@@ -96,9 +96,14 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     //window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 	
     // Update with your OneSignal AppId and googleProjectNumber before running.
-    window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
+   /** window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
                                    {googleProjectNumber: "455582282730"},
                                    notificationOpenedCallback);
+				   **/
+    window.plugins.OneSignal
+    .startInit("fb965b9c-e77a-11e4-a9ea-97388ec7efa9")
+    .handleNotificationOpened(notificationOpenedCallback)
+    .endInit();
 
     window.plugins.OneSignal.sendTags({app: "v2.4", news: "true"});
     window.plugins.OneSignal.setSubscription(true);
