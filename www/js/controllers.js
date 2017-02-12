@@ -168,22 +168,6 @@ angular.module('vllaznia.controllers', [])
 				});
 			}();
 		});
-
-	    var displayInterstial = function(){
-			var deviceName = device.model;
-			console.log(deviceName);
-			var pattern0 = /(GT-I9508|Nexus 5|nexus 5|SM-G920|SM-G925|SM-G93|SM-G90|GT-I95)/;
-			//returns true or false...
-			var exists0 = pattern0.test(deviceName);
-			if(!exists0)
-			{
-				ga_storage._trackEvent('Admob', 'Show', deviceName);
-				//AdMob.showInterstitial();
-			}
-            else{
-	            ga_storage._trackEvent('Admob', 'Dontshow', deviceName);
-            }			
-		};
 	  
       $timeout(function(){
         $ionicLoading.hide();
@@ -195,7 +179,7 @@ angular.module('vllaznia.controllers', [])
 		//AdMob.showInterstitialAd();
 		//if(AdMob) AdMob.showInterstitial();
 		console.log("hide loading + show banner");
-		displayInterstial();
+		//displayInterstial();
       },timerhide);
 
       })
@@ -298,30 +282,12 @@ angular.module('vllaznia.controllers', [])
 			autoShow: false
 		});
 	**/
-		window.plugins.AdMob.createInterstitialView();
+		//window.plugins.AdMob.createInterstitialView();
 		
 		$scope.$on('$ionicView.enter', function(){
-			displayInterstial();
+			//displayInterstial();
         });
-				
-		var displayInterstial = function(){  
-			var deviceName = device.model;
-			var pattern0 = /(GT-I9508|Nexus 5|nexus 5|SM-G920|SM-G925|SM-G93|SM-G90|GT-I95)/;
-			//returns true or false...
-			var exists0 = pattern0.test(deviceName);
-			console.log(deviceName);
-			if(!exists0)
-			{
-                console.log("show interstial");	
-                window.plugins.AdMob.showInterstitialAd(true);
-                ga_storage._trackEvent('AdmobL', 'ShowL', deviceName);
-
-			}
-            else{
-	            ga_storage._trackEvent('AdmobL', 'DontshowL', deviceName);				
-            }			
-		};
-		
+						
 		//AdMob.prepareInterstitial('ca-app-pub-7925487268042880/6932118769');
         //AdMob.showInterstitial();
 		//window.admob.cacheInterstitial();
@@ -349,7 +315,7 @@ angular.module('vllaznia.controllers', [])
       $scope.clubId = 13;
       $scope.start_val_id = 0;
       $scope.SezoneListS = [
-	    { text: "Superliga 2016-17", value: 111 },
+	{ text: "Superliga 2016-17", value: 111 },
         { text: "Superliga 2015-16", value: 105 },
         { text: "Superliga 2014-15", value: 100 },
         { text: "Superliga 2013-14", value: 97 },
@@ -553,7 +519,7 @@ angular.module('vllaznia.controllers', [])
 	   $scope.anim = "ion-ios-bell-outline";
 	   //console.log($scope.notification);
 	   var tags = "match"+ $stateParams.ndeshjaId;
-       console.log('User Tag: '+tags);
+           console.log('User Tag: '+tags);
 	   var isSubscribed = function(tags){
 		  window.plugins.OneSignal.getTags(function(tag)
 		  {
@@ -609,8 +575,8 @@ angular.module('vllaznia.controllers', [])
 		$scope.$on('$ionicView.beforeLeave', function(){
          $timeout.cancel(timer);
 		 console.log("leave view");
-		 window.plugins.AdMob.showAd(true);
-		 //AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+		 //window.plugins.AdMob.showAd(true);
+		 AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 		 //console.log("show");
 		});
 		
@@ -624,15 +590,15 @@ angular.module('vllaznia.controllers', [])
 				isSubscribed(tags);
 				if(counter%2)
 				{
-					window.plugins.AdMob.showAd(false);
+					//window.plugins.AdMob.showAd(false);
 					console.log("hide");
-					//AdMob.hideBanner();
+					AdMob.hideBanner();
 				}
 			    else
 				{
 					console.log("show");
-					window.plugins.AdMob.showAd(true);
-					//AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+					//window.plugins.AdMob.showAd(true);
+					AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
 				}
 				
 				NdeshjaService.getReport($stateParams.ndeshjaId, function(data) {
@@ -917,11 +883,11 @@ angular.module('vllaznia.controllers', [])
 
     .controller('TvCtrl', function($scope) {
 		ga_storage._trackPageview('#/app/tv', 'Vllaznia App TV');
-     /* AdMob.prepareInterstitial({
+      AdMob.prepareInterstitial({
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: true
 		});
-        AdMob.showInterstitialAd(); */
+        AdMob.showInterstitialAd();
 		
 		//window.admob.cacheInterstitial();
 		//window.adMob.showInterstitial();
