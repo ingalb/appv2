@@ -60,8 +60,7 @@
     <!--	<preference name="splash-screen-duration" value="500000" />-->
     <preference name="SplashScreenDelay" value="5000"/>
     <preference name="FadeSplashScreen" value="false"/>
-
-
+    <preference name="ShowSplashScreenSpinner" value="false" />
 
     <icon src="icon.png" />
     <splash src="splash.png" />
