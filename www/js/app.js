@@ -86,13 +86,13 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		}
 	});
 	**/	
-    var notificationOpenedCallback = function(jsonData) {
+ /**   var notificationOpenedCallback = function(jsonData) {
       //alert("Notification received:\n" + JSON.stringify(jsonData));
       //console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
       // firing an event downwards
       $rootScope.$broadcast('pushEvent', jsonData.notification.payload);
     };
-		
+**/		
     //window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
 	
     // Update with your OneSignal AppId and googleProjectNumber before running.
@@ -100,7 +100,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
                                    {googleProjectNumber: "455582282730"},
                                    notificationOpenedCallback);
 				   **/
-    window.plugins.OneSignal
+
+/**     window.plugins.OneSignal
     .startInit("fb965b9c-e77a-11e4-a9ea-97388ec7efa9")
     .handleNotificationOpened(notificationOpenedCallback)
     .endInit();
@@ -108,7 +109,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     window.plugins.OneSignal.sendTags({app: "v2.4", news: "true"});
     window.plugins.OneSignal.setSubscription(true);
     //window.plugins.OneSignal.enableInAppAlertNotification(true);
-	
+**/	
 /*
 window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
                        {googleProjectNumber: "455582282730"},
