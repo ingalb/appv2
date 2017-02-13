@@ -23,13 +23,13 @@
 	
 	<preference name="phonegap-version"/>
 
-	<gap:plugin name="cordova-plugin-device" source="npm"/>
+    <gap:plugin name="cordova-plugin-device" source="npm"/>
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
     <gap:plugin name="cordova-plugin-statusbar" source="npm"/>
-	<!--<gap:plugin name="cordova-plugin-splashscreen" source="npm"/>-->
-	<plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" />
-	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <plugin name="ionic-plugin-keyboard" source="npm" />
 
     <!--<gap:plugin name="admob" version="5.4.2" source="npm"/>-->
     <!-- <gap:plugin name="cordova-admob" source="npm" /> -->
