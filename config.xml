@@ -32,7 +32,8 @@
 
     <!--<gap:plugin name="admob" version="5.4.2" source="npm"/>-->
     <!-- <gap:plugin name="cordova-admob" source="npm" /> -->
-    <gap:plugin name="cordova-plugin-admobpro" source="npm" />
+    <!--<gap:plugin name="cordova-plugin-admobpro" source="npm" />-->
+	<plugin name="cordova-plugin-admobpro" spec="2.18.0" />
 	<!--<plugin spec="https://github.com/ingalb/cordova-plugin-admob.git" source="git" />-->
 <!-- 	<gap:plugin name="cordova-plugin-admob-free" source="npm" /> -->
 	<gap:plugin name="onesignal-cordova-plugin" source="npm" />
