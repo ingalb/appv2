@@ -17,7 +17,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         ga_storage._trackPageview('#/app/appJS2-0', 'Vllaznia App Js IOS v2-0');
 	//navigator.splashscreen.hide();
 		
-	//window.open = cordova.InAppBrowser.open;
+	window.open = cordova.InAppBrowser.open;
 		//AdMob = window.plugins.AdMob;
        
 	//Android
@@ -60,7 +60,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     // Request interstitial (will present automatically when autoShowInterstitial is set to true)
     //AdMob.requestInterstitialAd();
 	
-/**
+
  	AdMob.createBanner( {
         adId: admobid.banner, 
         isTesting: false,
@@ -72,9 +72,9 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     
     AdMob.prepareInterstitial({
         adId: admobid.interstitial,
-        autoShow: false
+        autoShow: true
     });
-**/
+
 
     } catch (e) {
         alert(e.message);
@@ -86,22 +86,16 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 		}
 	});
 	**/	
- /**   var notificationOpenedCallback = function(jsonData) {
+   var notificationOpenedCallback = function(jsonData) {
       //alert("Notification received:\n" + JSON.stringify(jsonData));
       //console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
       // firing an event downwards
       $rootScope.$broadcast('pushEvent', jsonData.notification.payload);
-    };
-**/		
+    };		
     //window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-	
-    // Update with your OneSignal AppId and googleProjectNumber before running.
-   /** window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
-                                   {googleProjectNumber: "455582282730"},
-                                   notificationOpenedCallback);
-				   **/
 
-/**     window.plugins.OneSignal
+
+     window.plugins.OneSignal
     .startInit("fb965b9c-e77a-11e4-a9ea-97388ec7efa9")
     .handleNotificationOpened(notificationOpenedCallback)
     .endInit();
@@ -109,20 +103,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     window.plugins.OneSignal.sendTags({app: "v2.4", news: "true"});
     window.plugins.OneSignal.setSubscription(true);
     //window.plugins.OneSignal.enableInAppAlertNotification(true);
-**/	
-/*
-window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
-                       {googleProjectNumber: "455582282730"},
-                       didReceiveRemoteNotificationCallBack);
-
-
-window.plugins.OneSignal.getIds(function(ids) {
-    console.log('getIds: ' + JSON.stringify(ids)); // I can see PushToken and UserId in the console.
-    window.localStorage["notification"] = JSON.stringify(jsonData);
-    //$rootScope.pushToken = ids.pushToken;
-});
-*/
-
+	
 /*    window.didReceiveRemoteNotificationCallBack = function(jsonData) {
         alert("Notification received:\n" + JSON.stringify(jsonData));
         window.localStorage["notification"] = JSON.stringify(jsonData);
