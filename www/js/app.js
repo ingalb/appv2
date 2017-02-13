@@ -60,7 +60,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     // Request interstitial (will present automatically when autoShowInterstitial is set to true)
     //AdMob.requestInterstitialAd();
 	
-	
+/**
  	AdMob.createBanner( {
         adId: admobid.banner, 
         isTesting: false,
@@ -74,10 +74,10 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         adId: admobid.interstitial,
         autoShow: false
     });
-
+**/
 
     } catch (e) {
-        console.log(e.message);
+        alert(e.message);
     }
 	
 	/**window.admob.isInterstitialReady(function(isReady){
@@ -107,7 +107,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 
     window.plugins.OneSignal.sendTags({app: "v2.4", news: "true"});
     window.plugins.OneSignal.setSubscription(true);
-    window.plugins.OneSignal.enableInAppAlertNotification(true);
+    //window.plugins.OneSignal.enableInAppAlertNotification(true);
 	
 /*
 window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
