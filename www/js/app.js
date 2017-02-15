@@ -64,8 +64,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
  	AdMob.createBanner( {
         adId: admobid.banner, 
         isTesting: false,
-        overlap: false, 
-        offsetTopBar: false, 
+        overlap: false,  
         position: AdMob.AD_POSITION.BOTTOM_CENTER,
         bgColor: 'red'
     } );
