@@ -73,6 +73,11 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         adId: admobid.interstitial,
         autoShow: true
     });
+	    
+    AppRate.preferences.storeAppURL = {
+  	ios: 'com.vllaznia.app',
+  	android: 'market://details?id=com.vllaznia.app'
+	};
 
 
     } catch (e) {
