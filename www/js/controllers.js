@@ -171,6 +171,7 @@ angular.module('vllaznia.controllers', [])
 	  
       $timeout(function(){
         $ionicLoading.hide();
+	AppRate.promptForRating(false);
         //AdMob.showBanner(8);
 		//admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
 		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
