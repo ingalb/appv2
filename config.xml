@@ -30,6 +30,7 @@
     <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <plugin name="ionic-plugin-keyboard" source="npm" />
+    <gap:plugin name="cordova-plugin-apprate" source="npm"/>
 
     <!--<gap:plugin name="admob" version="5.4.2" source="npm"/>-->
     <!-- <gap:plugin name="cordova-admob" source="npm" /> -->
@@ -58,7 +59,7 @@
  <!--   <preference name="auto-hide-splash-screen" value="true" />-->
     <preference name="AutoHideSplashScreen" value="false" />	
     <!--	<preference name="splash-screen-duration" value="500000" />-->
-    <preference name="SplashScreenDelay" value="5000"/>
+    <preference name="SplashScreenDelay" value="3000"/>
     <preference name="FadeSplashScreen" value="false"/>
     <preference name="ShowSplashScreenSpinner" value="false" />
 
