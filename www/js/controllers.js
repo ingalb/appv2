@@ -59,7 +59,7 @@ angular.module('vllaznia.controllers', [])
     .controller('IndexCtrl', function($scope, $ionicSlideBoxDelegate, $state, $timeout, $ionicLoading, $ionicPopup, LajmeService, $ionicModal, $rootScope, NdeshjetService) {
         var tani = new Date();
         var timerhide = 5000;
-        ga_storage._trackPageview('#/app/index', 'Vllaznia App Index v2.4');
+        ga_storage._trackPageview('#/app/index', 'Vllaznia App IOS Index v2.0');
         if(navigator.splashscreen){
            navigator.splashscreen.hide();
         }
