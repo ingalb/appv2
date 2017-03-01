@@ -400,6 +400,8 @@ angular.module('vllaznia.controllers', [])
 
      NdeshjetService.getAllNdeshjet($scope.sezoni_id, $scope.clubId, function(data) {
             $scope.items = data;
+	    var current = data[0].current_round - 1;
+	    $scope.ScrollTo("ndeshja-"+current);
             $ionicLoading.hide();
         });
      $timeout(function(){
