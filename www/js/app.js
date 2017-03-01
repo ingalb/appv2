@@ -14,7 +14,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     try{
 
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/appJS2-0', 'Vllaznia App Js IOS v2-0');
+        ga_storage._trackPageview('#/app/appJS2-5', 'Vllaznia App Js Android v2.5');
 	//navigator.splashscreen.hide();
 		
 	window.open = cordova.InAppBrowser.open;
