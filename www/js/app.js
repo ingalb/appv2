@@ -75,7 +75,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     });
 	    
     AppRate.preferences.storeAppURL = {
-  	ios: '1071146509',
+  	ios: '989642299',
   	android: 'market://details?id=com.vllaznia.app'
 	};
 
