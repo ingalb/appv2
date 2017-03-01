@@ -15,10 +15,10 @@
         Ingalb Company
     </author>
 
- 	<gap:config-file platform="android" parent="/manifest">
+ <!--	<gap:config-file platform="android" parent="/manifest">
 		<application android:debuggable="true" />
 	</gap:config-file>
-
+-->
 	<content src="index.html"/>
 	
 	<preference name="phonegap-version"/>
