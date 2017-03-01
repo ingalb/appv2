@@ -22,8 +22,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
        
 	//Android
         admobid = { 
-          banner: ca-app-pub-7925487268042880/6770099564, //'ca-app-pub-7925487268042880/6770099564',
-          interstitial: ca-app-pub-7925487268042880/7097196767 //'ca-app-pub-7925487268042880/7097196767'
+          banner: 'ca-app-pub-7925487268042880/6770099564', //'ca-app-pub-7925487268042880/6770099564',
+          interstitial: 'ca-app-pub-7925487268042880/7097196767' //'ca-app-pub-7925487268042880/7097196767'
         };
 		
 		//IOS
