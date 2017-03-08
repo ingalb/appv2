@@ -1,7 +1,7 @@
 angular.module('vllaznia.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicPopup) {
-   alert("OK AppCtrl");
+
 })
 
     .filter('matchData', function($filter){
@@ -57,12 +57,8 @@ angular.module('vllaznia.controllers', [])
     .controller('IndexCtrl', function($scope, $ionicSlideBoxDelegate, $state, $timeout, $ionicLoading, $ionicPopup, LajmeService, $ionicModal, $rootScope, NdeshjetService) {
         var tani = new Date();
         var timerhide = 5000;
-		alert("OK IndexCtrl");
         ga_storage._trackPageview('#/app/index', 'Vllaznia App IOS Index v2.0');
-        if(navigator.splashscreen){
-           navigator.splashscreen.hide();
-        }
-		
+        		
         $scope.CloseNotification = function() {
            $scope.modal.hide();
           //notifica();
@@ -170,7 +166,7 @@ angular.module('vllaznia.controllers', [])
 	  
       $timeout(function(){
         $ionicLoading.hide();
-	AppRate.promptForRating(false);
+	    AppRate.promptForRating(false);
         //AdMob.showBanner(8);
 		//admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
 		//window.admob.showBanner(admob.BannerSize.SMART_BANNER,admob.Position.BOTTOM_APP);
@@ -180,6 +176,7 @@ angular.module('vllaznia.controllers', [])
 		//if(AdMob) AdMob.showInterstitial();
 		console.log("hide loading + show banner");
 		//displayInterstial();
+		navigator.splashscreen.hide();
       },timerhide);
 
       })
