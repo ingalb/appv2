@@ -1,9 +1,7 @@
 angular.module('vllaznia.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicPopup) {
-   if(navigator.splashscreen){
-      navigator.splashscreen.hide();
-   }
+   alert("OK AppCtrl");
 })
 
     .filter('matchData', function($filter){
@@ -59,6 +57,7 @@ angular.module('vllaznia.controllers', [])
     .controller('IndexCtrl', function($scope, $ionicSlideBoxDelegate, $state, $timeout, $ionicLoading, $ionicPopup, LajmeService, $ionicModal, $rootScope, NdeshjetService) {
         var tani = new Date();
         var timerhide = 5000;
+		alert("OK IndexCtrl");
         ga_storage._trackPageview('#/app/index', 'Vllaznia App IOS Index v2.0');
         if(navigator.splashscreen){
            navigator.splashscreen.hide();
