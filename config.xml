@@ -150,6 +150,7 @@
     <access origin="googleapis.com" subdomains="true"/>
 
 	<allow-navigation href="*" />
+	<allow-navigation href="data:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
