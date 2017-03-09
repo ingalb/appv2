@@ -33,7 +33,7 @@ angular.module('vllaznia.services', [])
 		var KupaProjects = [];
         return {
             getSuperligaProjects: function(callback){
-				$http.get(URL_APP+'projects.php?id=1&app_id'+APP_ID).success(
+				$http.get(URL_APP+'projects.php?id=1&app_id='+APP_ID).success(
                     function(data) {
 						SuperligaProjects = data;
 						window.localStorage["superligaP"] = JSON.stringify(SuperligaProjects);
@@ -72,7 +72,7 @@ angular.module('vllaznia.services', [])
         var ndeshjet = [];
         return {
             getSuperligaVllaznia: function(callback) {
-                $http.get(URL_APP+'ndeshjet.php?id=superliga&ekipi=13&app_id'+APP_ID).success(
+                $http.get(URL_APP+'ndeshjet.php?id=superliga&ekipi=13&app_id='+APP_ID).success(
                     function(data) {
                         ndeshjet = data;
                         window.localStorage["ndeshjet"] = JSON.stringify(data);
@@ -105,7 +105,7 @@ angular.module('vllaznia.services', [])
               });
             },
             getSuperligaLastNdeshje: function(callback) {
-                $http.get(URL_APP+'ndeshjet.php?id=superliga1&ekipi=13&app_id'+APP_ID).success(
+                $http.get(URL_APP+'ndeshjet.php?id=superliga1&ekipi=13&app_id='+APP_ID).success(
                     function(data) {
                         ndeshjet = data;
                         window.localStorage["lastNdeshjet"] = JSON.stringify(data);
