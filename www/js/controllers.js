@@ -329,7 +329,7 @@ angular.module('vllaznia.controllers', [])
 		  $scope.SezoneListS = data;
 	  });
 	  **/
-	  $scope.$on('$ionicView.Enter', function(){
+	  $scope.$on('$ionicView.beforeEnter', function(){
 	    //console.log("enter view");
 		$ionicBackdrop.retain();
 		$ionicLoading.show();
@@ -693,7 +693,7 @@ angular.module('vllaznia.controllers', [])
 	 });
 	 **/
 	 
-	  $scope.$on('$ionicView.Enter', function(){
+	  $scope.$on('$ionicView.beforeEnter', function(){
 	    //console.log("enter view 12");
 		$ionicBackdrop.retain();
 		$ionicLoading.show();
