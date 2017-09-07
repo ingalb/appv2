@@ -249,7 +249,7 @@ angular.module('vllaznia.services', [])
                 });
             },
             get: function(lojtariId, callback) {
-				$http.get(URL_APP+'ekipi.php',{params:{id: 111, ekipi: 13, app_id: APP_ID}}).success(
+				$http.get(URL_APP+'ekipi.php',{params:{id: superliga, ekipi: 13, app_id: APP_ID}}).success(
                     function(data) {
                         ekipi1 = data;
                         window.localStorage["ekipi1"] = JSON.stringify(data);
