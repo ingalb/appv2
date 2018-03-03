@@ -5,7 +5,7 @@
         id = "com.vllaznia.app"
         versionCode = "1514"
         version = "2.6.0">
-    <name>Vllaznia App</name>
+    <name>Vllaznia</name>
 
     <description>
        Aplikacioni realizuar per Futboll Klub Vllaznia Shkoder. Historia, lajme, informacione dhe statistika nga ekipi i pare shqiptar Vllaznia Shkoder (Albania).
@@ -132,7 +132,7 @@
 <icon platform="ios" src="res/icon/ios/icon-60.png" width="60" height="60" />
 <icon platform="ios" src="res/icon/ios/icon-60-2x.png" width="120" height="120" />
 <icon platform="ios" src="res/icon/ios/icon-60-3x.png" width="180" height="180" />
-<icon platform="ios" src="res/icon/ios/icon-72.png" width="72" height="72" />
+<!--<icon platform="ios" src="res/icon/ios/icon-72.png" width="72" height="72" />-->
 <icon platform="ios" src="res/icon/ios/icon-72-2x.png" width="144" height="144" />
 <icon platform="ios" src="res/icon/ios/icon-76.png" width="76" height="76" />
 <icon platform="ios" src="res/icon/ios/icon-76-2x.png" width="152" height="152" />
