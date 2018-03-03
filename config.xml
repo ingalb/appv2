@@ -21,7 +21,7 @@
 -->
 	<content src="index.html"/>
 	
-	<preference name="phonegap-version"/>
+    <preference name='phonegap-version' value='cli-8.0.0' />
 
     <gap:plugin name="cordova-plugin-device" source="npm"/>
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
@@ -144,9 +144,8 @@
     <access origin="ingalb.info" subdomains="true"/>
     <access origin="ingalb.com" subdomains="true"/>
     <access origin="albaniasoccer.com" subdomains="true"/>
-    <access origin="cloudcontrolled.com" subdomains="true"/>
     <access origin="fkvllaznia.net" subdomains="true"/>
-    <access origin="vllaznia.cloudcontrolled.com/" subdomains="true"/>
+    <access origin="heroku.com/" subdomains="true"/>
     <access origin="googleapis.com" subdomains="true"/>
 
 	<allow-navigation href="*" />
