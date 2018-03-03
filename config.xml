@@ -22,7 +22,7 @@
 	<content src="index.html"/>
 	
     <preference name='phonegap-version' value='cli-8.0.0' />
-
+	
     <gap:plugin name="cordova-plugin-device" source="npm"/>
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
@@ -63,6 +63,9 @@
     <preference name="FadeSplashScreen" value="false"/>
     <preference name="ShowSplashScreenSpinner" value="false" />
 
+	
+   <platform name="android"/>
+    <platform name="ios"/>
     <icon src="icon.png" />
     <splash src="splash.png" />
 
