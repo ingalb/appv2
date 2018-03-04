@@ -59,7 +59,7 @@
     <splash src="splash.png" />
    -->
  <platform name="android">
-    <icon src="res/android/icon-36-ldpi.png" qualifier="ldpi" />
+    <!--<icon src="res/android/icon-36-ldpi.png" qualifier="ldpi" />-->
     <icon src="res/android/icon-48-mdpi.png" qualifier="mdpi" />
     <icon src="res/android/icon-72-hdpi.png" qualifier="hdpi" />
     <icon src="res/android/icon-96-xhdpi.png" qualifier="xhdpi" />
