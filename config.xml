@@ -56,8 +56,9 @@
 
    
     <icon src="res/icon.png" />
-    <splash src="splash.png" />
-   -->
+    <splash src="res/splash.png" />
+  
+<!--
 <platform name="android">
         <!--
             ldpi    : 36x36 px
@@ -81,6 +82,7 @@
     <splash src="res/screen/android/portrait-xxhdpi.png" qualifier="port-xxhdpi" />
     <splash src="res/screen/android/xxhdpi.png" qualifier="land-xxhdpi" />
 </platform>
+	-->
 
     <access origin="*"/>
     <access origin="ingalb.info" subdomains="true"/>
