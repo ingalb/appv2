@@ -88,12 +88,15 @@
 <icon platform="ios" src="res/icon/ios/icon-72-2x.png" width="144" height="144" />
 <icon platform="ios" src="res/icon/ios/icon-76.png" width="76" height="76" />
 <icon platform="ios" src="res/icon/ios/icon-76-2x.png" width="152" height="152" />
-
+<!--
 <splash platform="ios" src="res/screen/ios/Default.png" width="320" height="480" />
 <splash platform="ios" src="res/screen/ios/Default@2x.png" width="640" height="960" />
 <splash platform="ios" src="res/screen/ios/Default-568h@2x.png" width="640" height="1136" />
 <splash platform="ios" src="res/screen/ios/Default-6@3x.png" width="750" height="1334" />
 <splash platform="ios" src="res/screen/ios/Default-6Plus@3x.png" width="1242" height="2208" />
+-->
+<splash platform="ios" src="res/screen/ios/Default@2x~universal~anyany.png" />
+<splash platform="ios" src="res/screen/ios/Default@3x~universal~anyany.png" />	
 
 
     <access origin="*"/>
