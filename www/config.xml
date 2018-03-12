@@ -29,7 +29,11 @@
     <gap:plugin name="cordova-plugin-apprate" source="npm"/>
     <plugin name="cordova-plugin-admobpro" source="npm"/>
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
-    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />	
+    <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+        <param name="URL_SCHEME" value="vllazniaapp" />
+    </gap:plugin>
+	
 
 
     <preference name="permissions"  value="none"/>
