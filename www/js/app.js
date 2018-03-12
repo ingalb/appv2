@@ -1,6 +1,12 @@
 var URL_APP_TEST = "http://api1.ingalb.info/";
 var URL_APP = "http://api.albaniasoccer.com/";
 var APP_ID = 1;
+
+var handleOpenURL = function(url) {
+    window.localStorage.setItem("external_load", url); 
+    console.log(url);
+};
+
 // Ionic Starter App
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
@@ -106,6 +112,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 
     window.plugins.OneSignal.sendTags({app: "v2.6", news: "true"});
     window.plugins.OneSignal.setSubscription(true);
+
+	  
     //window.plugins.OneSignal.enableInAppAlertNotification(true);
 	
 /*    window.didReceiveRemoteNotificationCallBack = function(jsonData) {
