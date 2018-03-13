@@ -126,6 +126,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 	  
     $ionicPlatform.on('deviceready', function() {
       handleOpenURL();
+      console.log("load test");
     });
 	  
 	  
