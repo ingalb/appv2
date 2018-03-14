@@ -288,6 +288,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 function handleOpenURL(url) {
   setTimeout(function() {
     console.log("received url: " + url);
-    localStorage.setItem('UrlItem', url);  
+    //localStorage.setItem('UrlItem', url);
+    var res = url.substring(14);
+    window.localStorage["customUrl"] = res;
   }, 0);
 }
