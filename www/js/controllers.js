@@ -66,9 +66,10 @@ angular.module('vllaznia.controllers', [])
 	
 	if(window.localStorage["customUrl"] !== undefined)
 	{
-	   console.log(window.localStorage["customUrl"]);
-	   $state.go(window.localStorage["customUrl"]);
+	   var path_url = window.localStorage["customUrl"]);
 	   window.localStorage["customUrl"] = NULL;
+	   $state.go(path_url);
+	   
 	}
 	else
 	{
