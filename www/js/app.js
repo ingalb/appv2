@@ -287,6 +287,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
 
 function handleOpenURL(url) {
   setTimeout(function() {
-    alert("received url: " + url);
+    console.log("received url: " + url);
+    localStorage.setItem('UrlItem', url);  
   }, 0);
 }
