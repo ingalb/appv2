@@ -63,6 +63,12 @@ angular.module('vllaznia.controllers', [])
            $scope.modal.hide();
           //notifica();
        };
+	
+	if(window.localStorage["customUrl"] !== undefined)
+	{
+	   $state.go(window.localStorage["customUrl"]);
+	   window.localStorage["customUrl"] = NULL;
+	}
 
        $ionicModal.fromTemplateUrl('modal.html', function($ionicModal) {
           $scope.modal = $ionicModal;
