@@ -122,19 +122,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         console.log("The application is recieve interstial ready");
 		window.admob.showInterstitial();
     }, false); */
-	  
-	  
-    $ionicPlatform.on('deviceready', function() {
-      handleOpenURL();
-      console.log("load test");
-    });
-	  
-	  
-    var handleOpenURL = function(url) {
-       window.localStorage.setItem("external_load", url); 
-       console.log(url);
-    };
-
+	 
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
@@ -296,3 +284,9 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/index');
 });
+
+function handleOpenURL(url) {
+  setTimeout(function() {
+    alert("received url: " + url);
+  }, 0);
+}
