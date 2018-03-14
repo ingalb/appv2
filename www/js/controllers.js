@@ -66,8 +66,13 @@ angular.module('vllaznia.controllers', [])
 	
 	if(window.localStorage["customUrl"] !== undefined)
 	{
+	   console.log(window.localStorage["customUrl"]);
 	   $state.go(window.localStorage["customUrl"]);
 	   window.localStorage["customUrl"] = NULL;
+	}
+	else
+	{
+	   console.log("Custom URL not defined");	
 	}
 
        $ionicModal.fromTemplateUrl('modal.html', function($ionicModal) {
