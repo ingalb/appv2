@@ -64,12 +64,11 @@ angular.module('vllaznia.controllers', [])
           //notifica();
        };
 	
-	if(window.localStorage["customUrl"] !== undefined)
+	if(window.localStorage.customUrl !== undefined)
 	{
-	   var path_url = window.localStorage["customUrl"]);
-	   window.localStorage["customUrl"] = NULL;
-	   $state.go(path_url);
-	   
+	   var path_url = window.localStorage.customUrl;
+	   window.localStorage.removeItem("customUrl");
+	   $state.go(path_url);   
 	}
 	else
 	{
