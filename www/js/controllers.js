@@ -312,6 +312,7 @@ angular.module('vllaznia.controllers', [])
       $scope.clubId = 13;
       $scope.start_val_id = 0;
       $scope.SezoneListS = [
+	    { text: "Kategoria e Pare 2018-19", value: 121 },
 	    { text: "Superliga 2017-18", value: 117 },
 	    { text: "Superliga 2016-17", value: 111 },
         { text: "Superliga 2015-16", value: 105 },
@@ -412,6 +413,7 @@ angular.module('vllaznia.controllers', [])
       $scope.clubId = 13;
       $scope.start_val_id = 0;
       $scope.SezoneList = [
+	    { text: "Kupa e Shqiperise 2018-19", value: 123 },
 	    { text: "Kupa e Shqiperise 2017-18", value: 118 },
 	    { text: "Kupa e Shqiperise 2016-17", value: 113 },
         { text: "Kupa e Shqiperise 2015-16", value: 106 },
@@ -677,6 +679,7 @@ angular.module('vllaznia.controllers', [])
      var titulliPop = "Zgjidh kampionatin";
 	 $scope.start_val_id = 0;
      $scope.SezoneList = [
+	   { text: "Kategoria e Pare 2018-19", value: 121 },
 	   { text: "Superliga 2017-18", value: 117 },
 	   { text: "Superliga 2016-17", value: 111 },
        { text: "Superliga 2015-16", value: 105 },
