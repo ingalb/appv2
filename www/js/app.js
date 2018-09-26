@@ -14,7 +14,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     var admobid = {};
     try{
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/appJS2-6', 'Vllaznia App Js Android v2.6');
+        ga_storage._trackPageview('#/app/appJS2-6-1', 'Vllaznia App Js Android v2.6.1');
 	    navigator.splashscreen.hide();
 		
 	window.open = cordova.InAppBrowser.open;
@@ -104,7 +104,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     .handleNotificationOpened(notificationOpenedCallback)
     .endInit();
 
-    window.plugins.OneSignal.sendTags({app: "v2.6", news: "true"});
+    window.plugins.OneSignal.sendTags({app: "v2.6.1", news: "true"});
     window.plugins.OneSignal.setSubscription(true);
     //window.plugins.OneSignal.enableInAppAlertNotification(true);
 	
