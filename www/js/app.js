@@ -17,7 +17,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
         ga_storage._trackPageview('#/app/appJS2-6-1', 'Vllaznia App Js Android v2.6.1');
 	    navigator.splashscreen.hide();
 		
-	window.open = cordova.InAppBrowser.open;
+	//window.open = cordova.InAppBrowser.open;
 		//AdMob = window.plugins.AdMob;
        
 	//Android
