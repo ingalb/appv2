@@ -312,7 +312,7 @@ angular.module('vllaznia.controllers', [])
       $scope.clubId = 13;
       $scope.start_val_id = 0;
       $scope.SezoneListS = [
-	    { text: "Kategoria e Pare 2018-19", value: 121 },
+	    { text: "Kategoria 1 2018-19", value: 121 },
 	    { text: "Superliga 2017-18", value: 117 },
 	    { text: "Superliga 2016-17", value: 111 },
         { text: "Superliga 2015-16", value: 105 },
@@ -679,7 +679,7 @@ angular.module('vllaznia.controllers', [])
      var titulliPop = "Zgjidh kampionatin";
 	 $scope.start_val_id = 0;
      $scope.SezoneList = [
-	   { text: "Kategoria e Pare 2018-19", value: 121 },
+	   { text: "Kategoria 1 2018-19", value: 121 },
 	   { text: "Superliga 2017-18", value: 117 },
 	   { text: "Superliga 2016-17", value: 111 },
        { text: "Superliga 2015-16", value: 105 },
