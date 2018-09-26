@@ -66,7 +66,6 @@
     <icon src="icon.png" />
     <splash src="splash.png" />
 
-   <platform name="android"/>
     <icon src="res/icon/android/icon-36-ldpi.png" platform="android" qualifier="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png" platform="android" qualifier="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png" platform="android" qualifier="hdpi" />
@@ -79,8 +78,7 @@
     <splash src="res/screen/android/xhdpi.png" platform="android" qualifier="xhdpi" />
     <splash src="res/screen/android/portrait-xxhdpi.png" platform="android" qualifier="port-xxhdpi" />
     <splash src="res/screen/android/xxhdpi.png" platform="android" qualifier="land-xxhdpi" />
-	
-</platform>
+
 <!--
     <icon src="res/icon/ios/icon-60@3x.png" platform="ios" width="180" height="180" />
 
