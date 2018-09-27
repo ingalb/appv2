@@ -902,7 +902,7 @@ angular.module('vllaznia.controllers', [])
 		
         $scope.browse = function(v){
           ga_storage._trackEvent('TV', 'Play', v);
-            window.open(v, "_blank", "location=yes");
+            window.open(v, '_blank', '_system', 'location=yes');
         }
     })
 
