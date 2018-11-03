@@ -892,17 +892,10 @@ angular.module('vllaznia.controllers', [])
 			adId: 'ca-app-pub-7925487268042880/6932118769',
 			autoShow: true
 		});
-                AdMob.showInterstitial();
-	
-		
-		//window.admob.cacheInterstitial();
-		//window.adMob.showInterstitial();
-		//AdMob.requestInterstitialAd();
-		//AdMob.showInterstitialAd();
-		
+                AdMob.showInterstitial();		
         $scope.browse = function(v){
           ga_storage._trackEvent('TV', 'Play', v);
-            window.open(v, '_system');
+          window.open(v, '_system');
         }
     })
 
