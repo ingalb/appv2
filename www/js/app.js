@@ -14,7 +14,7 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
     var admobid = {};
     try{
         ga_storage._setAccount('UA-2341193-9');
-        ga_storage._trackPageview('#/app/appJS2-6-1', 'Vllaznia App Js Android v2.6.1');
+        ga_storage._trackPageview('#/app/appJS2-6-1', 'Vllaznia App Js Android v2.6.2');
 	    navigator.splashscreen.hide();
 		
 	//window.open = cordova.InAppBrowser.open;
@@ -22,8 +22,8 @@ angular.module('vllaznia', ['ionic', 'vllaznia.services', 'vllaznia.controllers'
        
 	//Android
         admobid = { 
-          banner: 'ca-app-pub-7925487268042880/5455385567', //'ca-app-pub-7925487268042880/6770099564',
-          interstitial: 'ca-app-pub-7925487268042880/6932118769' //'ca-app-pub-7925487268042880/7097196767'
+          banner: 'ca-app-pub-7925487268042880/6770099564', //'ca-app-pub-7925487268042880/6770099564',
+          interstitial: 'ca-app-pub-7925487268042880/7097196767' //'ca-app-pub-7925487268042880/7097196767'
         };
 		
 		//IOS
