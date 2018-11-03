@@ -17,7 +17,7 @@
 
 	<content src="index.html"/>
 	
-    <preference name='phonegap-version' value='cli-8.0.0' />
+    <preference name='phonegap-version'/>
 	
     <gap:plugin name="cordova-plugin-device" source="npm"/>
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
