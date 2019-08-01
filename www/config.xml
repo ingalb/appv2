@@ -31,7 +31,7 @@
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 	
-    <plugin name="cordova-admob-plus" spec="../../packages/cordova" source="npm" >
+    <plugin name="cordova-admob-plus" source="npm" >
         <variable name="APP_ID_ANDROID" value="ca-app-pub-7925487268042880~6770099564" />
         <variable name="APP_ID_IOS" value="ca-app-pub-7925487268042880~5455385567" />
     </plugin>
