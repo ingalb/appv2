@@ -3,8 +3,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
 		    xmlns:android="http://schemas.android.com/apk/res/android"
         id = "com.vllaznia.app"
-        versionCode = "1516"
-        version = "2.6.2">
+        versionCode = "1517"
+        version = "2.6.3">
     <name>Vllaznia</name>
 
     <description>
@@ -17,7 +17,7 @@
 
 	<content src="index.html"/>
 	
-    <preference name='phonegap-version' value='cli-8.0.0' />
+    <preference name='phonegap-version' value='cli-9.0.0' />
 	
     <gap:plugin name="cordova-plugin-device" source="npm"/>
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
@@ -37,7 +37,7 @@
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
-    <preference name="android-minSdkVersion"      value="16" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-minSdkVersion"      value="21" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 
     <preference name="webviewbounce" value="false" />
